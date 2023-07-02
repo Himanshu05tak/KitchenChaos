@@ -1,4 +1,6 @@
+using Input;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Controller
 {
@@ -6,6 +8,7 @@ namespace Controller
     {
         [SerializeField] private float speed;
         [SerializeField] private float smoothRotation;
+        [SerializeField] private PlayerInputController playerInputController;
 
         private Transform _transform;
         private bool _isWalking;
@@ -16,33 +19,16 @@ namespace Controller
 
         private void Update()
         {
-            PlayerInput();
+            PlayerMovement();
         }
 
-        private void PlayerInput()
+        private void PlayerMovement()
         {
-            var inputVector = new Vector2(0, 0);
-            if (Input.GetKey(KeyCode.W))
-            {
-                inputVector.y += 1;
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                inputVector.x -= 1;
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                inputVector.y -= 1;
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                inputVector.x += 1;
-            }
-
-            var moveDir = new Vector3(inputVector.x,0,inputVector.y).normalized;
-            _transform.position += moveDir * (speed * Time.deltaTime);
-            _isWalking = moveDir != Vector3.zero;
-            _transform.forward = Vector3.Slerp(transform.forward,moveDir,smoothRotation*Time.deltaTime);
+            Vector3 moveDir = playerInputController.GetMovementVectorNormalized();
+            var moveInputDirection = new Vector3(moveDir.x, 0, moveDir.y);
+            _transform.position += moveInputDirection * (speed * Time.deltaTime);
+            _isWalking = moveInputDirection != Vector3.zero;
+            _transform.forward = Vector3.Slerp(transform.forward,moveInputDirection,smoothRotation*Time.deltaTime);
         }
 
         public bool IsWalking()
