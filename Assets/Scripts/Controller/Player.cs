@@ -1,3 +1,4 @@
+using System;
 using Input;
 using UnityEngine;
 
@@ -5,6 +6,14 @@ namespace Controller
 {
     public class Player : MonoBehaviour
     {
+        public static Player Instance { get; private set; }
+        public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterCharged;
+
+        public class OnSelectedCounterChangedEventArgs : EventArgs
+        {
+            public ClearCounter SelectedCounter;
+        }
+
         [SerializeField] private float speed;
         [SerializeField] private float smoothRotation;
         [SerializeField] private PlayerInputController playerInputController;
@@ -13,9 +22,26 @@ namespace Controller
         private Transform _transform;
         private bool _isWalking;
         private Vector3 _lastInteraction;
+        private ClearCounter _selectedCounter;
         private void Awake()
         {
+            if(Instance!=null)
+                Debug.LogError("There is more than one player instance");
+            Instance = this;
             _transform = GetComponent<Transform>();
+        }
+
+        private void Start()
+        {
+            playerInputController.OnInteractAction += PlayerInputControllerOnOnInteractAction;
+        }
+
+        private void PlayerInputControllerOnOnInteractAction(object sender, EventArgs e)
+        {
+            if (_selectedCounter != null)
+            {
+                _selectedCounter.Interact();
+            }
         }
 
         private void Update()
@@ -60,9 +86,15 @@ namespace Controller
                 _lastInteraction = moveDir;
             var isInteract = Physics.Raycast(transform.position, _lastInteraction, out var hitInfo, interactionDistance,layerMask);
 
-            if (isInteract && hitInfo.transform.TryGetComponent(out ClearCounter.ClearCounter clearCounter))
+            if (isInteract && hitInfo.transform.TryGetComponent(out ClearCounter clearCounter))
             {
-                clearCounter.Interact();
+                if (clearCounter != null && clearCounter != _selectedCounter)
+                    _selectedCounter = clearCounter;
+                SetSelectedCounter(_selectedCounter);
+            }
+            else
+            {
+                SetSelectedCounter(null);
             }
         }
         private bool CanMove(Vector3 moveDir,float moveDistance)
@@ -76,6 +108,12 @@ namespace Controller
         public bool IsWalking()
         {
             return _isWalking;
+        }
+
+        private void SetSelectedCounter(ClearCounter selectedCounter)
+        {
+            _selectedCounter = selectedCounter;
+            OnSelectedCounterCharged?.Invoke(this,new OnSelectedCounterChangedEventArgs {SelectedCounter = _selectedCounter});
         }
     }
 }
