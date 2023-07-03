@@ -912,7 +912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   smoothRotation: 10
-  playerInput: {fileID: 1061282613}
+  playerInputController: {fileID: 1061282613}
 --- !u!4 &1730866771
 Transform:
   m_ObjectHideFlags: 0

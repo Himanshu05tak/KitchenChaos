@@ -10,11 +10,9 @@ namespace Input
             _playerInputAction = new PlayerInputAction();
             _playerInputAction.PlayerMove.Enable();
         }
-
         public Vector2 GetMovementVectorNormalized()
         {
-            var inputVector = _playerInputAction.PlayerMove.Move.ReadValue<Vector2>();
-            return inputVector.normalized;
+            return  _playerInputAction.PlayerMove.Move.ReadValue<Vector2>().normalized;
         }
     }
 }
