@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using ScriptableObjects;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class KitchenObject : MonoBehaviour
 {
@@ -13,8 +10,7 @@ public class KitchenObject : MonoBehaviour
 
     public void SetKitchenObjectParent(IKitchenObjectParent kitchenObjectParent)
     {
-        if(_kitchenObjectParent!=null)
-            _kitchenObjectParent.ClearKitchenObject();
+        _kitchenObjectParent?.ClearKitchenObject();
 
         _kitchenObjectParent = kitchenObjectParent;
      

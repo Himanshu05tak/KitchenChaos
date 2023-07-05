@@ -1,7 +1,6 @@
 using System;
 using Input;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Controller
 {
@@ -11,7 +10,7 @@ namespace Controller
         public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterCharged;
         public class OnSelectedCounterChangedEventArgs : EventArgs
         {
-            public ClearCounter SelectedCounter;
+            public BaseCounter SelectedCounter;
         }
 
         [SerializeField] private float speed;
@@ -24,7 +23,7 @@ namespace Controller
         private Transform _transform;
         private bool _isWalking;
         private Vector3 _lastInteraction;
-        private ClearCounter _selectedCounter;
+        private BaseCounter _selectedCounter;
         private KitchenObject _kitchenObject;
         
         private void Awake()
@@ -90,10 +89,10 @@ namespace Controller
                 _lastInteraction = moveDir;
             var isInteract = Physics.Raycast(transform.position, _lastInteraction, out var hitInfo, interactionDistance,layerMask);
 
-            if (isInteract && hitInfo.transform.TryGetComponent(out ClearCounter clearCounter))
+            if (isInteract && hitInfo.transform.TryGetComponent(out BaseCounter baseCounter))
             {
-                if (clearCounter != null && clearCounter != _selectedCounter)
-                    _selectedCounter = clearCounter;
+                if (baseCounter != null && baseCounter != _selectedCounter)
+                    _selectedCounter = baseCounter;
                 SetSelectedCounter(_selectedCounter);
             }
             else
@@ -114,7 +113,7 @@ namespace Controller
             return _isWalking;
         }
 
-        private void SetSelectedCounter(ClearCounter selectedCounter)
+        private void SetSelectedCounter(BaseCounter selectedCounter)
         {
             _selectedCounter = selectedCounter;
             OnSelectedCounterCharged?.Invoke(this,new OnSelectedCounterChangedEventArgs {SelectedCounter = _selectedCounter});
