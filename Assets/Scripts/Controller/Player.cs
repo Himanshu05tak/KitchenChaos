@@ -37,6 +37,15 @@ namespace Controller
         private void Start()
         {
             playerInputController.OnInteractAction += PlayerInputControllerOnOnInteractAction;
+            playerInputController.OnInteractAlternateAction += PlayerInputControllerOnOnInteractAlternateAction;
+        }
+
+        private void PlayerInputControllerOnOnInteractAlternateAction(object sender, EventArgs e)
+        {
+            if (_selectedCounter != null)
+            {
+                _selectedCounter.InteractAlternate(this);
+            }
         }
 
         private void PlayerInputControllerOnOnInteractAction(object sender, EventArgs e)
@@ -63,13 +72,13 @@ namespace Controller
             {
                 var moveDirX = new Vector3(moveDir.x, 0, 0).normalized;
                 CanMove(moveDirX, moveDistance);
-                if (CanMove(moveDirX, moveDistance))
+                if (moveDir.x !=0 && CanMove(moveDirX, moveDistance))
                     moveDir = moveDirX;
                 else
                 {
                     var moveDirZ = new Vector3(0, 0, moveDir.z).normalized;
                     CanMove(moveDirZ, moveDistance);
-                    if (CanMove(moveDirZ, moveDistance))
+                    if (moveDir.z != 0 && CanMove(moveDirZ, moveDistance))
                         moveDir = moveDirZ;
                 }
             }
@@ -83,6 +92,7 @@ namespace Controller
         {
             Vector3 inputVectorNormalized = playerInputController.GetMovementVectorNormalized();
             var moveDir = new Vector3(inputVectorNormalized.x, 0, inputVectorNormalized.y);
+            
             const float interactionDistance = 2f;
 
             if (moveDir != Vector3.zero)

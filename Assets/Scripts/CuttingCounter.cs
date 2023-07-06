@@ -2,9 +2,9 @@ using Controller;
 using ScriptableObjects;
 using UnityEngine;
 
-public class ClearCounter : BaseCounter
+public class CuttingCounter : BaseCounter
 {
-    [SerializeField] private KitchenObjectSO tomatoPrefab;
+    [SerializeField] private KitchenObjectSO cutKitchenObjectSo;
     
     public override void Interact(Player player)
     {
@@ -35,5 +35,13 @@ public class ClearCounter : BaseCounter
             }
             //There is a kitchen Object here
         }
+    }
+
+    public override void InteractAlternate(Player player)
+    {
+        if (!HasKitchenObject()) return;
+        GetKitchenObject().DestroySelf();
+
+        KitchenObject.SpawnKitchenObject(cutKitchenObjectSo, this);
     }
 }

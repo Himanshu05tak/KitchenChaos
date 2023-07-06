@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class ContainerCounter : BaseCounter
 {
-    [SerializeField] private KitchenObjectSO tomatoPrefab;
+    [SerializeField] private KitchenObjectSO kitchenObjectSo;
     public event EventHandler OnPlayerGrabObject;
     public override void Interact(Player player)
     {
-        var kitchenObjTransform = Instantiate(tomatoPrefab.prefab);
-        kitchenObjTransform.GetComponent<KitchenObject>().SetKitchenObjectParent(player);
+        if (player.HasKitchenObject()) return;
+        //Player isn't carrying anything
+        KitchenObject.SpawnKitchenObject(kitchenObjectSo, player);
         OnPlayerGrabObject?.Invoke(this,EventArgs.Empty);
     }
 }

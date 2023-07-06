@@ -8,11 +8,19 @@ namespace Input
     {
         private PlayerInputAction _playerInputAction;
         public event EventHandler OnInteractAction;
+        public event EventHandler OnInteractAlternateAction;
+
         private void Awake()
         {
             _playerInputAction = new PlayerInputAction();
             _playerInputAction.PlayerMove.Enable();
             _playerInputAction.PlayerMove.Interact.performed += InteractPerformed;
+            _playerInputAction.PlayerMove.InteractAlternate.performed += InteractAlternateOnPerformed;
+        }
+
+        private void InteractAlternateOnPerformed(InputAction.CallbackContext ctx)
+        {
+            OnInteractAlternateAction?.Invoke(this,EventArgs.Empty);
         }
 
         private void InteractPerformed(InputAction.CallbackContext ctx)
