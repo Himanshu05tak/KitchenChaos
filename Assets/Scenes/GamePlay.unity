@@ -772,7 +772,30 @@ PrefabInstance:
         type: 3}
       propertyPath: cutKitchenObjectSo
       value: 
-      objectReference: {fileID: 11400000, guid: d864c1ecaba9ba34896208fee9b95277,
+      objectReference: {fileID: 11400000, guid: 15c10dc45561a1243a2d8f9df0e13204,
+        type: 2}
+    - target: {fileID: 7043503024474246835, guid: 0fd6640d47895944087ad749e9b69ea0,
+        type: 3}
+      propertyPath: cuttingRecipeSos.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043503024474246835, guid: 0fd6640d47895944087ad749e9b69ea0,
+        type: 3}
+      propertyPath: cuttingRecipeSos.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: aa6a4881c108fb840876d29238a52e2a,
+        type: 2}
+    - target: {fileID: 7043503024474246835, guid: 0fd6640d47895944087ad749e9b69ea0,
+        type: 3}
+      propertyPath: cuttingRecipeSos.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 15c10dc45561a1243a2d8f9df0e13204,
+        type: 2}
+    - target: {fileID: 7043503024474246835, guid: 0fd6640d47895944087ad749e9b69ea0,
+        type: 3}
+      propertyPath: cuttingRecipeSos.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 454a937df429a8f43812596399eac390,
         type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -6,15 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerInputAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerInputAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerInputAction.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerInputAction.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BaseCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BaseCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClearCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClearCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ContainerCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ContainerCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/PlayerInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/PlayerInputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KitchenObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KitchenObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CuttingCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CuttingCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/Cabbage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/Cabbage.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +126,8 @@
       <workItem from="1688459762067" duration="13135000" />
       <workItem from="1688555583384" duration="9489000" />
       <workItem from="1688635291290" duration="544000" />
-      <workItem from="1688666347228" duration="4283000" />
+      <workItem from="1688666347228" duration="4465000" />
+      <workItem from="1688720744319" duration="2909000" />
     </task>
     <task id="LOCAL-00002" summary="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System">
       <option name="closed" value="true" />
@@ -182,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688564139342</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="- Fixed movement direction issue while rotating towards clear counter&#10;- Implemented Cutting Counter and logic&#10;-">
+      <option name="closed" value="true" />
+      <created>1688670846059</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1688670846059</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +203,7 @@
     <MESSAGE value="Implemented EventHandler for Interact &#10;Updated Visual counter" />
     <MESSAGE value="- Implemented Scriptable Object for having multiple type of kitchenObjects&#10;- Implemented Interface for carry kitchenObject to Player.cs&#10;- Player can spawn Kitchen Object over Clearcounter" />
     <MESSAGE value="- Refactor ClearCounter and ContainerCounter into BaseCounter and It has implemented Interface.&#10;- Container has Visual and Animation script attached to it.&#10;- Refactor ClearCounter and ContainerCounter derived from base class called BaseContainer using Prefab Variant" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Refactor ClearCounter and ContainerCounter into BaseCounter and It has implemented Interface.&#10;- Container has Visual and Animation script attached to it.&#10;- Refactor ClearCounter and ContainerCounter derived from base class called BaseContainer using Prefab Variant" />
+    <MESSAGE value="- Fixed movement direction issue while rotating towards clear counter&#10;- Implemented Cutting Counter and logic&#10;-" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fixed movement direction issue while rotating towards clear counter&#10;- Implemented Cutting Counter and logic&#10;-" />
   </component>
 </project>
