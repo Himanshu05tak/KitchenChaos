@@ -11,7 +11,6 @@ public class ClearCounter : BaseCounter
         if (!HasKitchenObject())
         {
             //There is no kitchen Object here
-            Debug.Log("There is no kitchen Object ");
             if (player.HasKitchenObject())
             {
                 //Player is carrying something 
