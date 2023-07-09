@@ -7,27 +7,14 @@
     <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CuttingItems/Cabbage-CabbageSlices.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/CuttingItems/Cabbage-CabbageSlices.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CuttingItems/Cheese-CheeseSlices.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/CuttingItems/Cheese-CheeseSlices.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CuttingItems/Tomato-TomatoSlices.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/CuttingItems/Tomato-TomatoSlices.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BaseCounter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BaseCounter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClearCounter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClearCounter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ContainerCounter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ContainerCounter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ContainerCounterVisual.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ContainerCounterVisual.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CuttingCounter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CuttingCounter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IKitchenObjectParent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IKitchenObjectParent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KitchenObject.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KitchenObject.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/CuttingRecipeSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/CuttingRecipeSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectedCounterVisual.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectedCounterVisual.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/KitchenItems/CheeseBlock.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/KitchenItems/CheeseBlock.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/KitchenItems/MeatPattyUncooked.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/KitchenItems/MeatPattyUncooked.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/BaseCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/BaseCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/CuttingCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/CuttingCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/CuttingCounterVisual.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/CuttingCounterVisual.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ProgressBarUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ProgressBarUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/CuttingCounter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/CuttingCounter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/MeatPattyUncooked.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/MeatPattyUncooked.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,15 +36,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animator/PlayerAnimator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ContainerCounter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ContainerCounterVisual.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CuttingCounter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/IKitchenObjectParent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/KitchenObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ProgressBarUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Counters/BaseCounter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Counters/StoveCounter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IHasProgress.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BurningRecipeSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/FryingRecipeSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/KitchenObjectSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SelectedCounterVisual.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TrashCounter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
   <component name="ProjectId" id="2S16rQVyilwO0nj4rhPaqIQAYuZ" />
@@ -69,6 +53,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -148,7 +133,9 @@
       <workItem from="1688635291290" duration="544000" />
       <workItem from="1688666347228" duration="4465000" />
       <workItem from="1688720744319" duration="3797000" />
-      <workItem from="1688803666118" duration="7900000" />
+      <workItem from="1688803666118" duration="8127000" />
+      <workItem from="1688890591238" duration="14076000" />
+      <workItem from="1688913261553" duration="1749000" />
     </task>
     <task id="LOCAL-00002" summary="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System">
       <option name="closed" value="true" />
@@ -214,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688724163029</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="- Cutting Progress bar Canvas has been implemented with various Camera Mode&#10;- Trash Counter has been implemented&#10;- Fixed - Exceptional Handled once you have cut an KitchenObject into Slices. No longer able to cut once its done&#10;- Organized Script Structure and Hierarchy Structure">
+      <option name="closed" value="true" />
+      <created>1688811849571</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1688811849571</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +229,7 @@
     <MESSAGE value="- Refactor ClearCounter and ContainerCounter into BaseCounter and It has implemented Interface.&#10;- Container has Visual and Animation script attached to it.&#10;- Refactor ClearCounter and ContainerCounter derived from base class called BaseContainer using Prefab Variant" />
     <MESSAGE value="- Fixed movement direction issue while rotating towards clear counter&#10;- Implemented Cutting Counter and logic&#10;-" />
     <MESSAGE value="- Implemented all type of cutting ingredients &#10;- CuttingCounter.cs which takes Input and Output&#10;- Cutting counter only works if recipe has Input and Output" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Implemented all type of cutting ingredients &#10;- CuttingCounter.cs which takes Input and Output&#10;- Cutting counter only works if recipe has Input and Output" />
+    <MESSAGE value="- Cutting Progress bar Canvas has been implemented with various Camera Mode&#10;- Trash Counter has been implemented&#10;- Fixed - Exceptional Handled once you have cut an KitchenObject into Slices. No longer able to cut once its done&#10;- Organized Script Structure and Hierarchy Structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Cutting Progress bar Canvas has been implemented with various Camera Mode&#10;- Trash Counter has been implemented&#10;- Fixed - Exceptional Handled once you have cut an KitchenObject into Slices. No longer able to cut once its done&#10;- Organized Script Structure and Hierarchy Structure" />
   </component>
 </project>
