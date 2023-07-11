@@ -4,9 +4,9 @@ public interface IKitchenObjectParent
 {
     public Transform GetKitchenObjectFollowTransform();
 
-    public void SetKitchenObject(KitchenObject kitchenObject);
+    public void SetKitchenObject(KitchenObject.KitchenObject kitchenObject);
 
-    public KitchenObject GetKitchenObject();
+    public KitchenObject.KitchenObject GetKitchenObject();
 
     public void ClearKitchenObject();
 

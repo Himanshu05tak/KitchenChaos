@@ -1,4 +1,5 @@
 using Controller;
+using Counters;
 
 public class TrashCounter : BaseCounter
 {

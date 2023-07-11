@@ -1,4 +1,5 @@
 using System;
+using Counters;
 using Input;
 using UnityEngine;
 
@@ -24,7 +25,7 @@ namespace Controller
         private bool _isWalking;
         private Vector3 _lastInteraction;
         private BaseCounter _selectedCounter;
-        private KitchenObject _kitchenObject;
+        private KitchenObject.KitchenObject _kitchenObject;
         
         private void Awake()
         {
@@ -133,12 +134,12 @@ namespace Controller
         {
             return kitchenObjectHoldPoint;
         }
-        public void SetKitchenObject(KitchenObject kitchenObject)
+        public void SetKitchenObject(KitchenObject.KitchenObject kitchenObject)
         {
             _kitchenObject = kitchenObject;
         }
 
-        public KitchenObject GetKitchenObject()
+        public KitchenObject.KitchenObject GetKitchenObject()
         {
             return _kitchenObject;
         }

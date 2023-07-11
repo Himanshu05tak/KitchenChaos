@@ -1,4 +1,5 @@
 using Controller;
+using Counters;
 using UnityEngine;
 
 public class SelectedCounterVisual : MonoBehaviour

@@ -8,6 +8,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 538432996944910788, guid: 63564de915623bf4b8177a7e31784f6a,
+        type: 3}
+      propertyPath: kitchenObjectSo
+      value: 
+      objectReference: {fileID: 11400000, guid: eda908ac9e8e21a49a53ecd8c97ed3ad,
+        type: 2}
     - target: {fileID: 2847543940938304567, guid: 63564de915623bf4b8177a7e31784f6a,
         type: 3}
       propertyPath: m_Name

@@ -1,5 +1,6 @@
 using System;
 using Controller;
+using Counters;
 using ScriptableObjects;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ public class ContainerCounter : BaseCounter
     {
         if (player.HasKitchenObject()) return;
         //Player isn't carrying anything
-        KitchenObject.SpawnKitchenObject(kitchenObjectSo, player);
+        KitchenObject.KitchenObject.SpawnKitchenObject(kitchenObjectSo, player);
         OnPlayerGrabObject?.Invoke(this,EventArgs.Empty);
     }
 }
