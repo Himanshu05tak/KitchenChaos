@@ -30,5 +30,9 @@ namespace Counters.Plate
             OnIngredientAdded?.Invoke(this, new OnIngredientAddedEventArgs { KitchenObjectSo = kitchenObjectSo });
             return true;
         }
+        public List<KitchenObjectSO> GetKitchenObjectSoList()
+        {
+            return _kitchenObjectSos;
+        }
     }
 }
