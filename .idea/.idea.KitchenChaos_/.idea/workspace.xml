@@ -4,15 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlateIconSingleUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlateIconSingleUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlateIconsUI.cs.meta" afterDir="false" />
+    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="- Implemented a visual way to represent how many ingredient a plate contains.&#10;- PlateIconSingleUI.cs handle and SetUI Icon logic&#10;- PlateIconUI UpdateVisual using event">
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Recipes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Recipes/Burger.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Recipes/Burger.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Recipes/CheeseBurger.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Recipes/CheeseBurger.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Recipes/MegaBurger.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Recipes/MegaBurger.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Recipes/Salad.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Recipes/Salad.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Recipes/_RecipeList.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Recipes/_RecipeList.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/DeliveryCounter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/DeliveryCounter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/DeliveryManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/DeliveryManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateIconSingleUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateIconSingleUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateIconsUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateIconsUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeListSO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeListSO.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeSO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeSO.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/MovingVisual.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/MovingVisual.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Materials/DeliveryArrow.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Materials/DeliveryArrow.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/DeliveryCounter.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/DeliveryCounter.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateKitchenObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateKitchenObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/Plate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/Plate.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlateIconSingleUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlateIconSingleUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlateIconsUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlateIconsUI.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,17 +61,17 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animator/PlayerAnimator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Counters/BaseCounter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Counters/DeliveryCounter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateCompleteVisual.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Counters/StoveCounter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IHasProgress.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BurningRecipeSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/FryingRecipeSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/KitchenObjectSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeListSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TestScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
@@ -145,7 +173,7 @@
       <workItem from="1688913261553" duration="3605000" />
       <workItem from="1688983448056" duration="11947000" />
       <workItem from="1689069566244" duration="8261000" />
-      <workItem from="1689155996061" duration="2121000" />
+      <workItem from="1689155996061" duration="7413000" />
     </task>
     <task id="LOCAL-00002" summary="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System">
       <option name="closed" value="true" />
@@ -235,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689077201612</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="- Implemented a visual way to represent how many ingredient a plate contains.&#10;- PlateIconSingleUI.cs handle and SetUI Icon logic&#10;- PlateIconUI UpdateVisual using event">
+      <option name="closed" value="true" />
+      <created>1689158653363</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1689158653363</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +295,7 @@
     <MESSAGE value="- Cutting Progress bar Canvas has been implemented with various Camera Mode&#10;- Trash Counter has been implemented&#10;- Fixed - Exceptional Handled once you have cut an KitchenObject into Slices. No longer able to cut once its done&#10;- Organized Script Structure and Hierarchy Structure" />
     <MESSAGE value="- Implemented StateMachine for Cooking meat to burn  &#10;- Implemented StoveCounter for cooking meat to burn&#10;- Created Scriptable Objects for Burning, Cooked and Uncooked meat &#10;- Created Prefabs for Burning, Cooked and Uncooked meat&#10;- Implemented IProgressBar which has been implemented in both Progressbar" />
     <MESSAGE value="- Implemented Plate Prefab, Scriptable Objects and complete burger Plate&#10;- Burger Ingredient logic &#10;- Plate can store Slices &#10;- Refactor BaseCounter.cs, &#10;- Added new Scripts PlateCompleteVisual.cs, PlateCounterVisual.cs and PlateCounterVisual.cs etc&#10;- Added MeatPattyBurned.prefab" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Implemented Plate Prefab, Scriptable Objects and complete burger Plate&#10;- Burger Ingredient logic &#10;- Plate can store Slices &#10;- Refactor BaseCounter.cs, &#10;- Added new Scripts PlateCompleteVisual.cs, PlateCounterVisual.cs and PlateCounterVisual.cs etc&#10;- Added MeatPattyBurned.prefab" />
+    <MESSAGE value="- Implemented a visual way to represent how many ingredient a plate contains.&#10;- PlateIconSingleUI.cs handle and SetUI Icon logic&#10;- PlateIconUI UpdateVisual using event" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Implemented a visual way to represent how many ingredient a plate contains.&#10;- PlateIconSingleUI.cs handle and SetUI Icon logic&#10;- PlateIconUI UpdateVisual using event" />
   </component>
 </project>
