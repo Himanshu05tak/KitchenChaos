@@ -14,7 +14,6 @@ namespace Counters
         public event EventHandler OnCut;
     
         private int _cuttingProgress;
-        private bool _isRecipeReady;
 
         public override void Interact(Player player)
         {
@@ -24,12 +23,10 @@ namespace Counters
                 if (player.HasKitchenObject())
                 {
                     //Player is carrying something 
-                    if(HasRecipeWithInput(player.GetKitchenObject().GetKitchenObjectSo))
+                    if (!HasRecipeWithInput(player.GetKitchenObject().GetKitchenObjectSo)) return;
                         //player carrying something that can be cut
-                        player.GetKitchenObject().SetKitchenObjectParent(this);
+                    player.GetKitchenObject().SetKitchenObjectParent(this);
                     _cuttingProgress = 0;
-                    _isRecipeReady = false;
-                
                     var cuttingRecipeSo = GetCuttingRecipeSoWithInput(GetKitchenObject().GetKitchenObjectSo);
                     OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { ProgressNormalized = (float)_cuttingProgress/ cuttingRecipeSo.cuttingProgressMax});
                 }
@@ -60,10 +57,8 @@ namespace Counters
 
         public override void InteractAlternate(Player player)
         {
-            //Todo while cutting Counter is empty if I try to cut an exceptional occured 
-        
-            if (!HasKitchenObject() && HasRecipeWithInput(GetKitchenObject().GetKitchenObjectSo)) return;
-            if(_isRecipeReady) return;
+            if (!HasKitchenObject()) return;
+            if (!HasRecipeWithInput(GetKitchenObject().GetKitchenObjectSo)) return;
             //There is a kitchenObject here and can be cut off.
             _cuttingProgress++;
             OnCut?.Invoke(this,EventArgs.Empty);
@@ -75,7 +70,6 @@ namespace Counters
             var outputKitchenObjectSo = GetOutputForInput(GetKitchenObject().GetKitchenObjectSo);
             GetKitchenObject().DestroySelf();
             KitchenObject.KitchenObject.SpawnKitchenObject(outputKitchenObjectSo, this);
-            _isRecipeReady = true;
         }
 
         private bool HasRecipeWithInput(KitchenObjectSO inputKitchenObjectSo)
