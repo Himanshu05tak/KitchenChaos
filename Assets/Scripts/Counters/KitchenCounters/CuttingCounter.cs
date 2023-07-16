@@ -10,6 +10,8 @@ namespace Counters
     public class CuttingCounter : BaseCounter, IHasProgress
     {
         [SerializeField] private CuttingRecipeSO[] cuttingRecipeSos;
+
+        public static event EventHandler OnAnyCut;
         public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
         public event EventHandler OnCut;
     
@@ -62,7 +64,8 @@ namespace Counters
             //There is a kitchenObject here and can be cut off.
             _cuttingProgress++;
             OnCut?.Invoke(this,EventArgs.Empty);
-        
+            OnAnyCut?.Invoke(this,EventArgs.Empty);
+            
             var cuttingRecipeSo = GetCuttingRecipeSoWithInput(GetKitchenObject().GetKitchenObjectSo);
             OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { ProgressNormalized = (float)_cuttingProgress/ cuttingRecipeSo.cuttingProgressMax});
 

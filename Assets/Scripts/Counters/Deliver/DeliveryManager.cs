@@ -12,6 +12,8 @@ namespace Counters
     {
         public event EventHandler OnRecipeSpawned;
         public event EventHandler OnRecipeComplete;
+        public event EventHandler OnRecipeFailed;
+        public event EventHandler OnRecipeSuccess;
         
         public static DeliveryManager Instance { get; private set; }
         [SerializeField] private RecipeListSO recipeListSo;
@@ -65,10 +67,13 @@ namespace Counters
                 Debug.Log("Player delivered  the correct recipe");
                 _waitingRecipeSoList.RemoveAt(i);
                 OnRecipeComplete?.Invoke(this,EventArgs.Empty);
+                OnRecipeSuccess?.Invoke(this,EventArgs.Empty);
                 return;
             }
             //No matches found
             //Player did not deliver a correct recipe
+            OnRecipeFailed?.Invoke(this,EventArgs.Empty);
+
             Debug.Log("Player did not deliver a correct recipe");
 
         }

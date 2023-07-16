@@ -9,6 +9,8 @@ namespace Controller
     {
         public static Player Instance { get; private set; }
         public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterCharged;
+
+        public event EventHandler OnPickSomething;
         public class OnSelectedCounterChangedEventArgs : EventArgs
         {
             public BaseCounter SelectedCounter;
@@ -137,6 +139,8 @@ namespace Controller
         public void SetKitchenObject(KitchenObject.KitchenObject kitchenObject)
         {
             _kitchenObject = kitchenObject;
+            if(kitchenObject!=null)
+                OnPickSomething?.Invoke(this,EventArgs.Empty);
         }
 
         public KitchenObject.KitchenObject GetKitchenObject()

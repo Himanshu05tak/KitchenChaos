@@ -1,3 +1,4 @@
+using System;
 using Controller;
 using UnityEngine;
 
@@ -5,6 +6,7 @@ namespace Counters
 {
     public abstract class BaseCounter : MonoBehaviour, IKitchenObjectParent
     {
+        public static event EventHandler OnAnyObjectPlacedHere;
         public abstract void Interact(Player player);
 
         public virtual void InteractAlternate(Player player)
@@ -23,6 +25,8 @@ namespace Counters
         public void SetKitchenObject(KitchenObject.KitchenObject kitchenObject)
         {
             _kitchenObject = kitchenObject;
+            if (kitchenObject != null) 
+                OnAnyObjectPlacedHere?.Invoke(this,EventArgs.Empty);
         }
         public KitchenObject.KitchenObject GetKitchenObject()
         {

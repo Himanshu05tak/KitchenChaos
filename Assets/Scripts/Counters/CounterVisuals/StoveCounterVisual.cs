@@ -1,17 +1,17 @@
 using UnityEngine;
 
-namespace Counters
+namespace Counters.CounterVisuals
 {
     public class StoveCounterVisual : MonoBehaviour
     {
         [SerializeField] private GameObject stoveGameObject;
         [SerializeField] private GameObject particleGameObject;
 
-        [SerializeField] private StoveCounter _stoveCounter;
+        [SerializeField] private StoveCounter stoveCounter;
         
         private void Start()
         {
-            _stoveCounter.OnStateChanged += StoveCounterOnOnStateChanged;
+            stoveCounter.OnStateChanged += StoveCounterOnOnStateChanged;
         }
         private void StoveCounterOnOnStateChanged(object sender, StoveCounter.OnStateChangedEventArgs e)
         {
