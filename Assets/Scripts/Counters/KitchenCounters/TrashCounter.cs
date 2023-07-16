@@ -1,7 +1,7 @@
 using System;
 using Controller;
 
-namespace Counters
+namespace Counters.KitchenCounters
 {
     public class TrashCounter : BaseCounter
     {

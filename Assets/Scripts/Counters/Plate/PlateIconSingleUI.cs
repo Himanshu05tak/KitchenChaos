@@ -1,13 +1,16 @@
-using ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
+using ScriptableObjects;
 
-public class PlateIconSingleUI : MonoBehaviour
+namespace Counters.Plate
 {
-   [SerializeField] private Image image;
-  
-   public void SetKitchenObjectSo(KitchenObjectSO kitchenObjectSo)
+   public class PlateIconSingleUI : MonoBehaviour
    {
-      image.sprite = kitchenObjectSo.sprite;
+      [SerializeField] private Image image;
+  
+      public void SetKitchenObjectSo(KitchenObjectSO kitchenObjectSo)
+      {
+         image.sprite = kitchenObjectSo.sprite;
+      }
    }
 }

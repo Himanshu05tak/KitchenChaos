@@ -5,7 +5,7 @@ using Interface;
 using ScriptableObjects;
 using UnityEngine;
 
-namespace Counters
+namespace Counters.KitchenCounters
 {
     public class StoveCounter : BaseCounter, IHasProgress
     {

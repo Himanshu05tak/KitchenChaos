@@ -1,5 +1,6 @@
 using System;
 using Counters;
+using Counters.KitchenCounters;
 using UnityEngine;
 
 public class CuttingCounterVisual : MonoBehaviour

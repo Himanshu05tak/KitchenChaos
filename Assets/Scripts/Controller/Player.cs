@@ -1,6 +1,9 @@
-using System;
-using Counters;
 using Input;
+using System;
+using Manager;
+using Counters;
+using Counters.KitchenCounters;
+using Interface;
 using UnityEngine;
 
 namespace Controller
@@ -45,6 +48,7 @@ namespace Controller
 
         private void PlayerInputControllerOnOnInteractAlternateAction(object sender, EventArgs e)
         {
+            if (!GameManager.Instance.IsGamePlaying()) return;
             if (_selectedCounter != null)
             {
                 _selectedCounter.InteractAlternate(this);
@@ -53,6 +57,7 @@ namespace Controller
 
         private void PlayerInputControllerOnOnInteractAction(object sender, EventArgs e)
         {
+            if (!GameManager.Instance.IsGamePlaying()) return;
             if (_selectedCounter != null)
             {
                 _selectedCounter.Interact(this);

@@ -1,8 +1,9 @@
 using System;
 using Controller;
+using Interface;
 using UnityEngine;
 
-namespace Counters
+namespace Counters.KitchenCounters
 {
     public abstract class BaseCounter : MonoBehaviour, IKitchenObjectParent
     {

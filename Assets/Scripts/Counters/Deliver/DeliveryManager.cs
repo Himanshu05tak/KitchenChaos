@@ -1,12 +1,12 @@
 using System;
-using System.Collections.Generic;
+using UnityEngine;
 using System.Linq;
 using Counters.Plate;
 using ScriptableObjects;
-using UnityEngine;
+using System.Collections.Generic;
 using Random = UnityEngine.Random;
 
-namespace Counters
+namespace Counters.Deliver
 {
     public class DeliveryManager : MonoBehaviour
     {
@@ -22,6 +22,7 @@ namespace Counters
         private float _spawnRecipeTimer;
         private readonly float _spawnRecipeTimerMax = 4f;
         private readonly int _waitingRecipesMax = 4;
+        private int _successfulRecipesAmount;
 
         private void Awake()
         {
@@ -64,6 +65,7 @@ namespace Counters
                 }
                 if (!plateContentsMatchesRecipe) continue;
                 //player delivered the correct recipe
+                _successfulRecipesAmount++;
                 Debug.Log("Player delivered  the correct recipe");
                 _waitingRecipeSoList.RemoveAt(i);
                 OnRecipeComplete?.Invoke(this,EventArgs.Empty);
@@ -81,6 +83,11 @@ namespace Counters
         public List<RecipeSO> GetWaitingRecipeSoList()
         {
             return _waitingRecipeSoList;
+        }
+
+        public int GetSuccessfulRecipeDelivered()
+        {
+            return _successfulRecipesAmount;
         }
     }
 }

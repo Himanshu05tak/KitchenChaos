@@ -1,10 +1,8 @@
 using System;
-using ScriptableObjects;
-using UI;
 using UnityEngine;
-using UnityEngine.UI;
+using Counters.Deliver;
 
-namespace Counters
+namespace UI
 {
     public class DeliveryManagerUI : MonoBehaviour
     {

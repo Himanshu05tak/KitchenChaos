@@ -1,7 +1,7 @@
-using System;
 using Controller;
+using Counters.KitchenCounters;
 
-namespace Counters
+namespace Counters.Deliver
 {
     public class DeliveryCounter : BaseCounter
     {

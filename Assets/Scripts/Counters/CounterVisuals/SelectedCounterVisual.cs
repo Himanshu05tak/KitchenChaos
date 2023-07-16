@@ -1,42 +1,45 @@
 using Controller;
-using Counters;
+using Counters.KitchenCounters;
 using UnityEngine;
 
-public class SelectedCounterVisual : MonoBehaviour
+namespace Counters.CounterVisuals
 {
-    [SerializeField] private BaseCounter baseCounter;
-    [SerializeField] private GameObject[] visualGameObjectArray;
-    private void Start()
+    public class SelectedCounterVisual : MonoBehaviour
     {
-        Player.Instance.OnSelectedCounterCharged += InstanceOnOnSelectedCounterCharged;
-    }
+        [SerializeField] private BaseCounter baseCounter;
+        [SerializeField] private GameObject[] visualGameObjectArray;
+        private void Start()
+        {
+            Player.Instance.OnSelectedCounterCharged += InstanceOnOnSelectedCounterCharged;
+        }
 
-    private void InstanceOnOnSelectedCounterCharged(object sender, Player.OnSelectedCounterChangedEventArgs e)
-    {
-        if (e.SelectedCounter == baseCounter)
+        private void InstanceOnOnSelectedCounterCharged(object sender, Player.OnSelectedCounterChangedEventArgs e)
         {
-            Show();
+            if (e.SelectedCounter == baseCounter)
+            {
+                Show();
+            }
+            else
+            {
+                Hide();
+            }
         }
-        else
-        {
-            Hide();
-        }
-    }
 
-    private void Show()
-    {
-        foreach (var visual in visualGameObjectArray)
+        private void Show()
         {
-            visual.SetActive(true);
-        }
+            foreach (var visual in visualGameObjectArray)
+            {
+                visual.SetActive(true);
+            }
       
-    }
+        }
 
-    private void Hide()
-    {
-        foreach (var visual in visualGameObjectArray)
+        private void Hide()
         {
-            visual.SetActive(false);
+            foreach (var visual in visualGameObjectArray)
+            {
+                visual.SetActive(false);
+            }
         }
     }
 }

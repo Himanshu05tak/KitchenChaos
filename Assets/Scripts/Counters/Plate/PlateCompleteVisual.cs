@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using ScriptableObjects;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Counters.Plate
 {
     public class PlateCompleteVisual : MonoBehaviour
     {
         [SerializeField] private PlateKitchenObject plateKitchenObject;
-        [SerializeField] private List<KitchenObjectSO_GameObject> kitchenObjectSoGameObjectList;
+        [SerializeField] private List<KitchenObjectSoGameObject> kitchenObjectSoGameObjectList;
         private void Start()
         {
             plateKitchenObject.OnIngredientAdded += PlateKitchenObjectOnOnIngredientAdded;
@@ -30,7 +29,7 @@ namespace Counters.Plate
         }
         
         [Serializable]
-        public struct KitchenObjectSO_GameObject
+        public struct KitchenObjectSoGameObject
         {
             public KitchenObjectSO kitchenObjectSo;
             public GameObject gameObject;

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Counters
+namespace Counters.Plate
 {
     public class PlateCounterVisual : MonoBehaviour
     {

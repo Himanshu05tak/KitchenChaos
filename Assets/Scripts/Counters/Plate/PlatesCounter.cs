@@ -1,9 +1,10 @@
 using System;
 using Controller;
+using Counters.KitchenCounters;
 using ScriptableObjects;
 using UnityEngine;
 
-namespace Counters
+namespace Counters.Plate
 {
     public class PlatesCounter : BaseCounter
     {
