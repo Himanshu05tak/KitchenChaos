@@ -77,7 +77,6 @@ namespace Manager
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-            Debug.Log(_state);
         }
         
         public bool IsGamePlaying()

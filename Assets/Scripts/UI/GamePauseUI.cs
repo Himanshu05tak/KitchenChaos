@@ -9,11 +9,13 @@ namespace UI
     {
         [SerializeField] private Button resumeBtn;
         [SerializeField] private Button mainMenuBtn;
+        [SerializeField] private Button optionBtn;
 
         private void Awake()
         {
             resumeBtn.onClick.AddListener(()=>GameManager.Instance.ToggledPauseGame());
             mainMenuBtn.onClick.AddListener(()=> Loader.Load(Loader.Scene.MainMenu));
+            optionBtn.onClick.AddListener(() => { OptionUI.Instance.Show();});
         }
 
         private void Start()

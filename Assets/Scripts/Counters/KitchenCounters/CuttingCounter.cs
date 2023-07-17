@@ -64,7 +64,6 @@ namespace Counters.KitchenCounters
             //There is a kitchenObject here and can be cut off.
             _cuttingProgress++;
             OnCut?.Invoke(this,EventArgs.Empty);
-            Debug.Log(OnAnyCut.GetInvocationList().Length);
             OnAnyCut?.Invoke(this,EventArgs.Empty);
             
             var cuttingRecipeSo = GetCuttingRecipeSoWithInput(GetKitchenObject().GetKitchenObjectSo);

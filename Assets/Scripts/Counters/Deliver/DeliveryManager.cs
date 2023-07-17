@@ -39,7 +39,6 @@ namespace Counters.Deliver
                 if (_waitingRecipeSoList.Count < _waitingRecipesMax)
                 {
                     var waitingRecipeSo = recipeListSo.RecipeSOList[Random.Range(0, recipeListSo.RecipeSOList.Count)];
-                    Debug.Log($"{waitingRecipeSo.recipeName}");
                     _waitingRecipeSoList.Add(waitingRecipeSo);
                     OnRecipeSpawned?.Invoke(this,EventArgs.Empty);
                 }
@@ -66,7 +65,6 @@ namespace Counters.Deliver
                 if (!plateContentsMatchesRecipe) continue;
                 //player delivered the correct recipe
                 _successfulRecipesAmount++;
-                Debug.Log("Player delivered  the correct recipe");
                 _waitingRecipeSoList.RemoveAt(i);
                 OnRecipeComplete?.Invoke(this,EventArgs.Empty);
                 OnRecipeSuccess?.Invoke(this,EventArgs.Empty);
@@ -75,9 +73,6 @@ namespace Counters.Deliver
             //No matches found
             //Player did not deliver a correct recipe
             OnRecipeFailed?.Invoke(this,EventArgs.Empty);
-
-            Debug.Log("Player did not deliver a correct recipe");
-
         }
 
         public List<RecipeSO> GetWaitingRecipeSoList()
