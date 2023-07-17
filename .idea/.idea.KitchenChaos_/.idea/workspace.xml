@@ -4,55 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="- Implemented AudioClips for Player's Footsteps, Pickup, drop, stove, trash and On Delivery Fail and Success.&#10;- PlayerSounds.cs : It is specific for player footstep&#10;- SoundManager.cs : This is control every sound played by AudioSource&#10;- StoveCounterSound.cs : While stove is frying or fried &#10;- Created Scriptable object to organize all the sound clip assets">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/PlayerSounds.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/PlayerSounds.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/StoveCounterSound.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/StoveCounterSound.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameCountDownStartUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameCountDownStartUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameOverUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameOverUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GamePlayingClockUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GamePlayingClockUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF StartCountDown.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF StartCountDown.mat.meta" afterDir="false" />
+    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Loader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Loader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LoaderCallback.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LoaderCallback.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuUI.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/CounterVisuals/ContainerCounterVisual.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/CounterVisuals/ContainerCounterVisual.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/CounterVisuals/CuttingCounterVisual.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/CounterVisuals/CuttingCounterVisual.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/CounterVisuals/SelectedCounterVisual.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/CounterVisuals/SelectedCounterVisual.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/CounterVisuals/StoveCounterVisual.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/CounterVisuals/StoveCounterVisual.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Deliver/DeliveryCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Deliver/DeliveryCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Deliver/DeliveryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Deliver/DeliveryManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/BaseCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/BaseCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/ClearCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/ClearCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/ContainerCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/ContainerCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/CuttingCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/CuttingCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/StoveCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/StoveCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/TrashCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/TrashCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateCompleteVisual.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateCompleteVisual.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateCounterVisual.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateCounterVisual.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateIconSingleUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateIconSingleUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateKitchenObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateKitchenObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlatesCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlatesCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interface/IKitchenObjectParent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IKitchenObjectParent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KitchenObject/KitchenObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KitchenObject/KitchenObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerSounds.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerSounds.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StoveCounterSound.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StoveCounterSound.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DeliveryManagerSingleUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeliveryManagerSingleUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DeliveryManagerUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeliveryManagerUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LookAtCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LookAtCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlateIconsUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlateIconsUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ProgressBarUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ProgressBarUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +39,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animator/PlayerAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Counters/KitchenCounters/BaseCounter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateCompleteVisual.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IHasProgress.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -192,7 +157,8 @@
       <workItem from="1689155996061" duration="8518000" />
       <workItem from="1689258608226" duration="4348000" />
       <workItem from="1689410744116" duration="5008000" />
-      <workItem from="1689492987700" duration="6915000" />
+      <workItem from="1689492987700" duration="7148000" />
+      <workItem from="1689588406669" duration="2809000" />
     </task>
     <task id="LOCAL-00002" summary="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System">
       <option name="closed" value="true" />
@@ -322,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689494987131</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="- Organized namespace and script structure&#10;- Implemented GameOverUI, Countdown UI and Timer UI&#10;- GameManager.cs is to control game Flow using State Machine&#10;- GameCountDownStartUI.cs is controlling countDown logic&#10;- GameOverUI.cs is handling GameOver Logic&#10;- GamePlayingClockUI.cs is handling timer logic">
+      <option name="closed" value="true" />
+      <created>1689503091381</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1689503091381</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,6 +325,7 @@
     <MESSAGE value="- Implemented a Package TMP&#10;- Implemented DeliveryManagerSingleUI.cs update actual recipe name and Icon. &#10;- Implemented DeliveryManagerUI.cs display actual recipe on screen" />
     <MESSAGE value="- Fixed Interact and Alternative Interact action for Cutting counter&#10;- Added Music on GamePlay.unity" />
     <MESSAGE value="- Implemented AudioClips for Player's Footsteps, Pickup, drop, stove, trash and On Delivery Fail and Success.&#10;- PlayerSounds.cs : It is specific for player footstep&#10;- SoundManager.cs : This is control every sound played by AudioSource&#10;- StoveCounterSound.cs : While stove is frying or fried &#10;- Created Scriptable object to organize all the sound clip assets" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Implemented AudioClips for Player's Footsteps, Pickup, drop, stove, trash and On Delivery Fail and Success.&#10;- PlayerSounds.cs : It is specific for player footstep&#10;- SoundManager.cs : This is control every sound played by AudioSource&#10;- StoveCounterSound.cs : While stove is frying or fried &#10;- Created Scriptable object to organize all the sound clip assets" />
+    <MESSAGE value="- Organized namespace and script structure&#10;- Implemented GameOverUI, Countdown UI and Timer UI&#10;- GameManager.cs is to control game Flow using State Machine&#10;- GameCountDownStartUI.cs is controlling countDown logic&#10;- GameOverUI.cs is handling GameOver Logic&#10;- GamePlayingClockUI.cs is handling timer logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Organized namespace and script structure&#10;- Implemented GameOverUI, Countdown UI and Timer UI&#10;- GameManager.cs is to control game Flow using State Machine&#10;- GameCountDownStartUI.cs is controlling countDown logic&#10;- GameOverUI.cs is handling GameOver Logic&#10;- GamePlayingClockUI.cs is handling timer logic" />
   </component>
 </project>
