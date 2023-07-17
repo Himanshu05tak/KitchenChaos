@@ -41,5 +41,10 @@ namespace Counters.KitchenCounters
         {
             return _kitchenObject!=null;
         }
+
+        public static void ResetStaticData()
+        {
+            OnAnyObjectPlacedHere = null;
+        }
     }
 }

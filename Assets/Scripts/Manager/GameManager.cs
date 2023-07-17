@@ -1,4 +1,5 @@
 using System;
+using Input;
 using UnityEngine;
 
 namespace Manager
@@ -7,16 +8,20 @@ namespace Manager
     {
         public static GameManager Instance { get; private set; }
         public event EventHandler OnStateChanged;
+        public event EventHandler OnGamePause;
+        public event EventHandler OnGameResume;
         private GameState _state;
         private float _waitingToStartTimer = 1f;
         private float _countDownToStartTimer = 3f;
         private float _gamePlayingTimer;
         private float _gamePlayingTimerMax = 10f;
+        private bool _isGamePaused = false;
         private enum GameState
         {
             WaitingToStart,
             CountDownToStart,
             GamePlaying,
+            Pause,
             GameOver
         }
 
@@ -24,6 +29,16 @@ namespace Manager
         {
             Instance = this;
             _state = GameState.WaitingToStart;
+        }
+
+        private void Start()
+        {
+            PlayerInputController.Instance.OnPauseInteraction += GameInputOnPauseAction;
+        }
+
+        private void GameInputOnPauseAction(object sender, EventArgs e)
+        {
+            ToggledPauseGame();
         }
 
         private void Update()
@@ -54,6 +69,8 @@ namespace Manager
                     if (_gamePlayingTimer < 0f)
                         _state = GameState.GameOver;
                     OnStateChanged?.Invoke(this,EventArgs.Empty);
+                    break;
+                case GameState.Pause:
                     break;
                 case GameState.GameOver:
                     break;
@@ -86,6 +103,21 @@ namespace Manager
         public float GetPlayingTimerNormalized()
         {
             return 1 - _gamePlayingTimer / _gamePlayingTimerMax;
+        }
+
+        public void ToggledPauseGame()
+        {
+            _isGamePaused = !_isGamePaused;
+            if (_isGamePaused)
+            {
+                Time.timeScale = 0;
+                OnGamePause?.Invoke(this,EventArgs.Empty);
+            }
+            else
+            {
+                Time.timeScale = 1;
+                OnGameResume?.Invoke(this,EventArgs.Empty);
+            }
         }
     }
 }

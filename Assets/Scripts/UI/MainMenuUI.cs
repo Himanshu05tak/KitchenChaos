@@ -12,6 +12,7 @@ namespace UI
         {
             playBtn.onClick.AddListener(() => { Loader.Load(Loader.Scene.GamePlay); });
             quitBtn.onClick.AddListener(Application.Quit);
+            Time.timeScale = 1;
         }
     }
 }
