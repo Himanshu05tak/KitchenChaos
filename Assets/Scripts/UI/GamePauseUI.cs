@@ -14,7 +14,7 @@ namespace UI
         private void Awake()
         {
             resumeBtn.onClick.AddListener(()=>GameManager.Instance.ToggledPauseGame());
-            mainMenuBtn.onClick.AddListener(()=> Loader.Load(Loader.Scene.MainMenu));
+            mainMenuBtn.onClick.AddListener(()=> Loader.Loader.Load(Loader.Loader.Scene.MainMenu));
             optionBtn.onClick.AddListener(() => { OptionUI.Instance.Show();});
         }
 
