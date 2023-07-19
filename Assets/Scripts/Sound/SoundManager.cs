@@ -81,6 +81,10 @@ namespace Sound
         {
             PlaySound(audioClipRefsSo.footStep, position, volume);
         }
+        public void PlaySoundOnCountDown()
+        {
+            PlaySound(audioClipRefsSo.warning, Vector3.zero);
+        }
 
         public void ChangeVolume()
         {

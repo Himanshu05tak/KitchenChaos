@@ -105,7 +105,6 @@ namespace UI
                  RebindBinding(PlayerInputController.Bindings.GamePadPause);
              });
         }
-
         private void Start()
         {
             GameManager.Instance.OnGamePause += OnGamePause;

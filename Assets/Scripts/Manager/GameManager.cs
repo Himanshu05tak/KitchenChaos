@@ -11,7 +11,6 @@ namespace Manager
         public event EventHandler OnGamePause;
         public event EventHandler OnGameResume;
         private GameState _state;
-        private float _waitingToStartTimer = 1f;
         private float _countDownToStartTimer = 3f;
         private float _gamePlayingTimer;
         private float _gamePlayingTimerMax = 10f;
@@ -34,6 +33,14 @@ namespace Manager
         private void Start()
         {
             PlayerInputController.Instance.OnPauseInteraction += GameInputOnPauseAction;
+            PlayerInputController.Instance.OnInteractAction += GameInputOnInteractAction;
+        }
+
+        private void GameInputOnInteractAction(object sender, EventArgs e)
+        {
+            if (_state ==  GameState.WaitingToStart)
+                _state = GameState.CountDownToStart;
+            OnStateChanged?.Invoke(this,EventArgs.Empty);
         }
 
         private void GameInputOnPauseAction(object sender, EventArgs e)
@@ -51,10 +58,6 @@ namespace Manager
             switch (_state)
             {
                 case GameState.WaitingToStart:
-                    _waitingToStartTimer -= Time.deltaTime;
-                    if (_waitingToStartTimer < 0f)
-                        _state = GameState.CountDownToStart;
-                    OnStateChanged?.Invoke(this,EventArgs.Empty);
                     break;
                 case GameState.CountDownToStart:
                     _countDownToStartTimer -= Time.deltaTime;

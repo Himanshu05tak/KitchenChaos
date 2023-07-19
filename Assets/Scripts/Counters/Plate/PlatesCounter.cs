@@ -1,6 +1,7 @@
 using System;
 using Controller;
 using Counters.KitchenCounters;
+using Manager;
 using ScriptableObjects;
 using UnityEngine;
 
@@ -32,9 +33,9 @@ namespace Counters.Plate
         private void Update()
         {
             _spawnPlateTimer += Time.deltaTime;
-            if (!(_spawnPlateTimer > spawnPlateTimerMax)) return;
+            if (!(GameManager.Instance.IsGamePlaying() && _spawnPlateTimer > spawnPlateTimerMax )) return;
             _spawnPlateTimer = 0;
-            if (_plateSpawnedAmount >= plateSpawnedAmountMax) return;
+            if ( _plateSpawnedAmount >= plateSpawnedAmountMax) return;
             _plateSpawnedAmount++;
             OnPlateSpawned?.Invoke(this,EventArgs.Empty);
         }

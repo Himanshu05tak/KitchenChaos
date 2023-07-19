@@ -4,6 +4,7 @@ using System.Linq;
 using Counters.Plate;
 using ScriptableObjects;
 using System.Collections.Generic;
+using Manager;
 using Random = UnityEngine.Random;
 
 namespace Counters.Deliver
@@ -36,7 +37,7 @@ namespace Counters.Deliver
             if (_spawnRecipeTimer <= 0f)
             {
                 _spawnRecipeTimer = _spawnRecipeTimerMax;
-                if (_waitingRecipeSoList.Count < _waitingRecipesMax)
+                if (GameManager.Instance.IsGamePlaying() && _waitingRecipeSoList.Count < _waitingRecipesMax)
                 {
                     var waitingRecipeSo = recipeListSo.RecipeSOList[Random.Range(0, recipeListSo.RecipeSOList.Count)];
                     _waitingRecipeSoList.Add(waitingRecipeSo);

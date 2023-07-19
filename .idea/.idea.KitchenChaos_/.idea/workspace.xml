@@ -4,15 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="">
+    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="- Implemented GamePad controller and Selected Btn while switching Keyboard to Mouse.&#10;- OptionUI.cs and PlayerInputController.cs have relevant functions&#10;- GamePauseUI.cs contains all the essential btn and Text to show up">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TutorialUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TutorialUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/CountDownUI.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/CountDownUI.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/CountDownUI_NumPopup.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/CountDownUI_NumPopup.anim.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerInputAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerInputAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerInputAction.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerInputAction.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Deliver/DeliveryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Deliver/DeliveryManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlatesCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlatesCounter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/PlayerInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/PlayerInputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GamePauseUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GamePauseUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameCountDownStartUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameCountDownStartUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/OptionUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OptionUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +56,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameOverUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/UI/GamePauseUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/OptionUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/TutorialUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TestScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.6.1/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.6.1/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
@@ -161,7 +167,7 @@
       <workItem from="1689588406669" duration="2809000" />
       <workItem from="1689599908809" duration="6937000" />
       <workItem from="1689675952514" duration="7016000" />
-      <workItem from="1689756895773" duration="4566000" />
+      <workItem from="1689756895773" duration="8341000" />
     </task>
     <task id="LOCAL-00002" summary="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System">
       <option name="closed" value="true" />
@@ -331,7 +337,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689697941896</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="- Implemented GamePad controller and Selected Btn while switching Keyboard to Mouse.&#10;- OptionUI.cs and PlayerInputController.cs have relevant functions&#10;- GamePauseUI.cs contains all the essential btn and Text to show up">
+      <option name="closed" value="true" />
+      <created>1689763614777</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1689763614777</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,20 +379,21 @@
     <MESSAGE value="- Implemented Pause Game&#10;- ResetDataStaticManager.cs Clear all the static data&#10;- Added new Button in PlayerInput&#10;- GamePauseUI.cs handle Pause logic" />
     <MESSAGE value="- Implemented OptionUI.cs for the MusicManager.cs and SoundManager.cs&#10;- Added MusicManager.cs handle music itself&#10;- Added Save and load option setting using PlayerPrefs" />
     <MESSAGE value="- Implemented Input bindings&#10;- Extended PlayInput Controller for GetBinding, GetBindingText etc" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Implemented Input bindings&#10;- Extended PlayInput Controller for GetBinding, GetBindingText etc" />
+    <MESSAGE value="- Implemented GamePad controller and Selected Btn while switching Keyboard to Mouse.&#10;- OptionUI.cs and PlayerInputController.cs have relevant functions&#10;- GamePauseUI.cs contains all the essential btn and Text to show up" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Implemented GamePad controller and Selected Btn while switching Keyboard to Mouse.&#10;- OptionUI.cs and PlayerInputController.cs have relevant functions&#10;- GamePauseUI.cs contains all the essential btn and Text to show up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/UI/OptionUI.cs</url>
-          <line>140</line>
+          <line>139</line>
           <properties documentPath="F:\Works\Unity_Projects\Personal\KitchenChaos_\Assets\Scripts\UI\OptionUI.cs" initialLine="140" containingFunctionPresentation="Method 'Show'">
             <startOffsets>
-              <option value="6033" />
+              <option value="6032" />
             </startOffsets>
             <endOffsets>
-              <option value="6070" />
+              <option value="6069" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />

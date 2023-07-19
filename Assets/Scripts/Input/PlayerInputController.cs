@@ -27,6 +27,7 @@ namespace Input
         public event EventHandler OnInteractAction;
         public event EventHandler OnInteractAlternateAction;
         public event EventHandler OnPauseInteraction;
+        public event EventHandler OnBindingRebind;
 
         private void Awake()
         {
@@ -150,6 +151,7 @@ namespace Input
                 
                 PlayerPrefs.SetString(PLAYER_PREFS_BINDINGS,_playerInputAction.SaveBindingOverridesAsJson());
                 PlayerPrefs.Save();
+                OnBindingRebind?.Invoke(this,EventArgs.Empty);
             }).Start();
         }
     }
