@@ -15,7 +15,7 @@ namespace UI
         {
             resumeBtn.onClick.AddListener(()=>GameManager.Instance.ToggledPauseGame());
             mainMenuBtn.onClick.AddListener(()=> Loader.Loader.Load(Loader.Loader.Scene.MainMenu));
-            optionBtn.onClick.AddListener(() => { OptionUI.Instance.Show();});
+            optionBtn.onClick.AddListener(() => { Hide(); OptionUI.Instance.Show(Show);});
         }
 
         private void Start()
@@ -38,6 +38,7 @@ namespace UI
         private void Show()
         {
             gameObject.SetActive(true);
+            resumeBtn.Select();
         }
 
         private void Hide()

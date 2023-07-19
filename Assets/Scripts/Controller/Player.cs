@@ -78,16 +78,26 @@ namespace Controller
          
             if (!CanMove(moveDir, moveDistance))
             {
+                //Cannot move towards moveDir
+                
+                //Attempt only X movement
                 var moveDirX = new Vector3(moveDir.x, 0, 0).normalized;
                 CanMove(moveDirX, moveDistance);
-                if (moveDir.x !=0 && CanMove(moveDirX, moveDistance))
+
+                if (moveDir.x is < -.5f or > .5f && CanMove(moveDirX, moveDistance)) 
+                    //Can move only on the X
                     moveDir = moveDirX;
                 else
                 {
+                    //Cannot move only on the X
+                    
+                    //Attempt only Z movement
                     var moveDirZ = new Vector3(0, 0, moveDir.z).normalized;
                     CanMove(moveDirZ, moveDistance);
-                    if (moveDir.z != 0 && CanMove(moveDirZ, moveDistance))
+                    if (moveDir.z is < -.5f or > .5f && CanMove(moveDirZ, moveDistance))
+                        //Can move only on the Z
                         moveDir = moveDirZ;
+                    //Cannot move in any direction
                 }
             }
             if(CanMove(moveDir,moveDistance))

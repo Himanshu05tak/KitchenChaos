@@ -6,13 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerInputAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerInputAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerInputAction.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerInputAction.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/PlayerInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/PlayerInputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Loader/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Loader/Loader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Loader/LoaderCallback.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Loader/LoaderCallback.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GamePauseUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GamePauseUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/OptionUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OptionUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,10 +113,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="19584">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="19584" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -160,7 +160,8 @@
       <workItem from="1689492987700" duration="7148000" />
       <workItem from="1689588406669" duration="2809000" />
       <workItem from="1689599908809" duration="6937000" />
-      <workItem from="1689675952514" duration="6066000" />
+      <workItem from="1689675952514" duration="7016000" />
+      <workItem from="1689756895773" duration="4566000" />
     </task>
     <task id="LOCAL-00002" summary="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System">
       <option name="closed" value="true" />
@@ -322,7 +323,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689606849071</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="- Implemented Input bindings&#10;- Extended PlayInput Controller for GetBinding, GetBindingText etc">
+      <option name="closed" value="true" />
+      <created>1689697941896</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1689697941896</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,6 +364,26 @@
     <MESSAGE value="- Added MainMenu.unity&#10;- Added LoadingScene.unity&#10;- Implemented Loading Logic &#10;- Implemented Main menu Logic" />
     <MESSAGE value="- Implemented Pause Game&#10;- ResetDataStaticManager.cs Clear all the static data&#10;- Added new Button in PlayerInput&#10;- GamePauseUI.cs handle Pause logic" />
     <MESSAGE value="- Implemented OptionUI.cs for the MusicManager.cs and SoundManager.cs&#10;- Added MusicManager.cs handle music itself&#10;- Added Save and load option setting using PlayerPrefs" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Implemented OptionUI.cs for the MusicManager.cs and SoundManager.cs&#10;- Added MusicManager.cs handle music itself&#10;- Added Save and load option setting using PlayerPrefs" />
+    <MESSAGE value="- Implemented Input bindings&#10;- Extended PlayInput Controller for GetBinding, GetBindingText etc" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Implemented Input bindings&#10;- Extended PlayInput Controller for GetBinding, GetBindingText etc" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/OptionUI.cs</url>
+          <line>140</line>
+          <properties documentPath="F:\Works\Unity_Projects\Personal\KitchenChaos_\Assets\Scripts\UI\OptionUI.cs" initialLine="140" containingFunctionPresentation="Method 'Show'">
+            <startOffsets>
+              <option value="6033" />
+            </startOffsets>
+            <endOffsets>
+              <option value="6070" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

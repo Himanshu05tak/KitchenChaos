@@ -16,7 +16,10 @@ namespace Input
             MoveRight,
             Interact,
             InteractAlt,
-            Pause
+            Pause,
+            GamePadInteraction,
+            GamePadInteractionAlternate,
+            GamePadPause
         }
         public static PlayerInputController Instance;
         
@@ -81,6 +84,9 @@ namespace Input
                 Bindings.Interact => _playerInputAction.PlayerMove.Interact.bindings[0].ToDisplayString(),
                 Bindings.InteractAlt => _playerInputAction.PlayerMove.InteractAlternate.bindings[0].ToDisplayString(),
                 Bindings.Pause => _playerInputAction.PlayerMove.Pause.bindings[0].ToDisplayString(),
+                Bindings.GamePadInteraction => _playerInputAction.PlayerMove.Interact.bindings[1].ToDisplayString(),
+                Bindings.GamePadInteractionAlternate => _playerInputAction.PlayerMove.InteractAlternate.bindings[1].ToDisplayString(),
+                Bindings.GamePadPause => _playerInputAction.PlayerMove.Pause.bindings[1].ToDisplayString(),
                 _ => throw new ArgumentOutOfRangeException(nameof(bindings), bindings, null)
             };
         }
@@ -120,6 +126,18 @@ namespace Input
                 case Bindings.Pause:
                     inputAction = _playerInputAction.PlayerMove.Pause;
                     bindingIndex = 0;
+                    break;
+                case Bindings.GamePadInteraction:
+                    inputAction = _playerInputAction.PlayerMove.Interact;
+                    bindingIndex = 1;
+                    break;
+                case Bindings.GamePadInteractionAlternate:
+                    inputAction = _playerInputAction.PlayerMove.InteractAlternate;
+                    bindingIndex = 1;
+                    break;
+                case Bindings.GamePadPause:
+                    inputAction = _playerInputAction.PlayerMove.Pause;
+                    bindingIndex = 1;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(bindings), bindings, null);
