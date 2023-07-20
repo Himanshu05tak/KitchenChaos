@@ -85,6 +85,11 @@ namespace Sound
         {
             PlaySound(audioClipRefsSo.warning, Vector3.zero);
         }
+        public void PlayWarningSound(Vector3 pos)
+        {
+            PlaySound(audioClipRefsSo.warning, pos);
+        }
+
 
         public void ChangeVolume()
         {

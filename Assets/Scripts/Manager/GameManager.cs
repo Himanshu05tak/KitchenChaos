@@ -13,8 +13,8 @@ namespace Manager
         private GameState _state;
         private float _countDownToStartTimer = 3f;
         private float _gamePlayingTimer;
-        private float _gamePlayingTimerMax = 10f;
-        private bool _isGamePaused = false;
+        [SerializeField] private float gamePlayingTimerMax = 10f;
+        private bool _isGamePaused;
         private enum GameState
         {
             WaitingToStart,
@@ -63,7 +63,7 @@ namespace Manager
                     _countDownToStartTimer -= Time.deltaTime;
                     if (_countDownToStartTimer < 0f)
                         _state = GameState.GamePlaying;
-                    _gamePlayingTimer = _gamePlayingTimerMax;
+                    _gamePlayingTimer = gamePlayingTimerMax;
                     OnStateChanged?.Invoke(this,EventArgs.Empty);
 
                     break;
@@ -104,7 +104,7 @@ namespace Manager
 
         public float GetPlayingTimerNormalized()
         {
-            return 1 - _gamePlayingTimer / _gamePlayingTimerMax;
+            return 1 - _gamePlayingTimer / gamePlayingTimerMax;
         }
 
         public void ToggledPauseGame()

@@ -147,5 +147,10 @@ namespace Counters.KitchenCounters
         {
             return (from burningRecipeSo in burningRecipeSoArray where burningRecipeSo.input == inputKitchenObjectSo select burningRecipeSo).FirstOrDefault();
         }
+
+        public bool IsFried()
+        {
+            return fryingState == FryingState.Fried;
+        }
     }
 }

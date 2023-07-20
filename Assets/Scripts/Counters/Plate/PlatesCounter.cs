@@ -33,9 +33,9 @@ namespace Counters.Plate
         private void Update()
         {
             _spawnPlateTimer += Time.deltaTime;
-            if (!(GameManager.Instance.IsGamePlaying() && _spawnPlateTimer > spawnPlateTimerMax )) return;
-            _spawnPlateTimer = 0;
-            if ( _plateSpawnedAmount >= plateSpawnedAmountMax) return;
+            if (!( GameManager.Instance.IsGamePlaying() && _spawnPlateTimer > spawnPlateTimerMax )) return;
+                _spawnPlateTimer = 0;
+                if ( _plateSpawnedAmount >= plateSpawnedAmountMax) return;
             _plateSpawnedAmount++;
             OnPlateSpawned?.Invoke(this,EventArgs.Empty);
         }

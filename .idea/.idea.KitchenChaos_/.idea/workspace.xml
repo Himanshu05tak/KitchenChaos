@@ -4,21 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="- Implemented GamePad controller and Selected Btn while switching Keyboard to Mouse.&#10;- OptionUI.cs and PlayerInputController.cs have relevant functions&#10;- GamePauseUI.cs contains all the essential btn and Text to show up">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TutorialUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TutorialUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/CountDownUI.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/CountDownUI.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/CountDownUI_NumPopup.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/CountDownUI_NumPopup.anim.meta" afterDir="false" />
+    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeliveryResultUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeliveryResultUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/StoveBurnFlashingBarUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/StoveBurnFlashingBarUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/StoveBurnWarningUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/StoveBurnWarningUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/DeliveryResultUI.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/DeliveryResultUI.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/DeliveryResultUI_Popup.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/DeliveryResultUI_Popup.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/StoveBurnFlashingBar.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/StoveBurnFlashingBar.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/StoveBurnFlashingBar_Flash.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/StoveBurnFlashingBar_Flash.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/StoveBurnFlashingBar_Idle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/StoveBurnFlashingBar_Idle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/StoveBurnWarningUI.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/StoveBurnWarningUI.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/StoveBurnWarningUI_Flash.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/StoveBurnWarningUI_Flash.anim.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Deliver/DeliveryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Deliver/DeliveryManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/BurningRecipe/MeatPattyCooked-MeatPattyBurned.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/BurningRecipe/MeatPattyCooked-MeatPattyBurned.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/FryingRecipe/MeatPattyUncooked-MeatPattyCooked.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/FryingRecipe/MeatPattyUncooked-MeatPattyCooked.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/StoveCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/StoveCounter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlatesCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlatesCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/PlayerInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/PlayerInputController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameCountDownStartUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameCountDownStartUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/OptionUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OptionUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound/StoveCounterSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/StoveCounterSound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/DeliveryCounter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/DeliveryCounter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/StoveCounter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/StoveCounter.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +56,10 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animator/PlayerAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateCompleteVisual.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,10 +73,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeListSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/MusicManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DeliveryResultUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameCountDownStartUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameOverUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/UI/GamePauseUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/OptionUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/StoveBurnFlashingBarUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/StoveBurnWarningUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/TutorialUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TestScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.6.1/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
@@ -119,10 +142,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="19584">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26868">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="19584" />
+      <option name="pid" value="26868" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -167,7 +190,8 @@
       <workItem from="1689588406669" duration="2809000" />
       <workItem from="1689599908809" duration="6937000" />
       <workItem from="1689675952514" duration="7016000" />
-      <workItem from="1689756895773" duration="8341000" />
+      <workItem from="1689756895773" duration="8953000" />
+      <workItem from="1689844654592" duration="7622000" />
     </task>
     <task id="LOCAL-00002" summary="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System">
       <option name="closed" value="true" />
@@ -345,7 +369,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689763614777</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="- Polish Stage&#10;- Added Walls on GamePlay.unity&#10;- Added Animation on Count Down Number and Sound&#10;- Added TutorialUI.cs &#10;- Remove Time logic from Start off the game and Set using GameState in GameManager.cs and PlatesCounter.cs&#10;- Checking a condition if GameState == GamePlay on DeliveryManager.cs">
+      <option name="closed" value="true" />
+      <created>1689773174317</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1689773174317</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +412,8 @@
     <MESSAGE value="- Implemented OptionUI.cs for the MusicManager.cs and SoundManager.cs&#10;- Added MusicManager.cs handle music itself&#10;- Added Save and load option setting using PlayerPrefs" />
     <MESSAGE value="- Implemented Input bindings&#10;- Extended PlayInput Controller for GetBinding, GetBindingText etc" />
     <MESSAGE value="- Implemented GamePad controller and Selected Btn while switching Keyboard to Mouse.&#10;- OptionUI.cs and PlayerInputController.cs have relevant functions&#10;- GamePauseUI.cs contains all the essential btn and Text to show up" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Implemented GamePad controller and Selected Btn while switching Keyboard to Mouse.&#10;- OptionUI.cs and PlayerInputController.cs have relevant functions&#10;- GamePauseUI.cs contains all the essential btn and Text to show up" />
+    <MESSAGE value="- Polish Stage&#10;- Added Walls on GamePlay.unity&#10;- Added Animation on Count Down Number and Sound&#10;- Added TutorialUI.cs &#10;- Remove Time logic from Start off the game and Set using GameState in GameManager.cs and PlatesCounter.cs&#10;- Checking a condition if GameState == GamePlay on DeliveryManager.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Polish Stage&#10;- Added Walls on GamePlay.unity&#10;- Added Animation on Count Down Number and Sound&#10;- Added TutorialUI.cs &#10;- Remove Time logic from Start off the game and Set using GameState in GameManager.cs and PlatesCounter.cs&#10;- Checking a condition if GameState == GamePlay on DeliveryManager.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
