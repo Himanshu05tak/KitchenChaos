@@ -11,9 +11,9 @@ namespace Manager
         public event EventHandler OnGamePause;
         public event EventHandler OnGameResume;
         private GameState _state;
-        private float _countDownToStartTimer = 3f;
+        private float _countDownToStartTimer = 1f;
         private float _gamePlayingTimer;
-        [SerializeField] private float gamePlayingTimerMax = 10f;
+        [SerializeField] private float gamePlayingTimerMax = 300f;
         private bool _isGamePaused;
         private enum GameState
         {
@@ -34,6 +34,10 @@ namespace Manager
         {
             PlayerInputController.Instance.OnPauseInteraction += GameInputOnPauseAction;
             PlayerInputController.Instance.OnInteractAction += GameInputOnInteractAction;
+            
+            //DEBUG TRIGGER GAME START AUTOMATICALLY
+            _state = GameState.CountDownToStart;
+            OnStateChanged?.Invoke(this,EventArgs.Empty);
         }
 
         private void GameInputOnInteractAction(object sender, EventArgs e)

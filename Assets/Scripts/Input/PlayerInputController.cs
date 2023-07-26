@@ -21,7 +21,7 @@ namespace Input
             GamePadInteractionAlternate,
             GamePadPause
         }
-        public static PlayerInputController Instance;
+        public static PlayerInputController Instance { get; private set; }
         
         private PlayerInputAction _playerInputAction;
         public event EventHandler OnInteractAction;

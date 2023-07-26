@@ -10,7 +10,7 @@ namespace Counters.CounterVisuals
         [SerializeField] private GameObject[] visualGameObjectArray;
         private void Start()
         {
-            Player.Instance.OnSelectedCounterCharged += InstanceOnOnSelectedCounterCharged;
+            //Player.Instance.OnSelectedCounterCharged += InstanceOnOnSelectedCounterCharged;
         }
 
         private void InstanceOnOnSelectedCounterCharged(object sender, Player.OnSelectedCounterChangedEventArgs e)

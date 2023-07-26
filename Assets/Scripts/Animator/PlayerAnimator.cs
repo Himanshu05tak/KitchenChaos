@@ -17,7 +17,7 @@ namespace Animator
         }
         private void Update()
         {
-            _animator.SetBool(Walking,playerController.IsWalking());
+            //_animator.SetBool(Walking,playerController.IsWalking());
         }
     }
 }

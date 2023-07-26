@@ -1,16 +1,16 @@
 using Input;
 using System;
 using Manager;
-using Counters;
 using Counters.KitchenCounters;
 using Interface;
+using Unity.Netcode;
 using UnityEngine;
 
 namespace Controller
 {
-    public class Player : MonoBehaviour, IKitchenObjectParent
+    public class Player : NetworkBehaviour, IKitchenObjectParent
     {
-        public static Player Instance { get; private set; }
+        //public static Player Instance { get; private set; }
         public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterCharged;
 
         public event EventHandler OnPickSomething;
@@ -21,7 +21,6 @@ namespace Controller
 
         [SerializeField] private float speed;
         [SerializeField] private float smoothRotation;
-        [SerializeField] private PlayerInputController playerInputController;
         [SerializeField] private LayerMask layerMask;
         [SerializeField] private Transform kitchenObjectHoldPoint;
 
@@ -34,16 +33,16 @@ namespace Controller
         
         private void Awake()
         {
-            if(Instance!=null)
-                Debug.LogError("There is more than one player instance");
-            Instance = this;
+            // if(Instance!=null)
+            //     Debug.LogError("There is more than one player instance");
+            // Instance = this;
             _transform = GetComponent<Transform>();
         }
 
         private void Start()
         {
-            playerInputController.OnInteractAction += PlayerInputControllerOnOnInteractAction;
-            playerInputController.OnInteractAlternateAction += PlayerInputControllerOnOnInteractAlternateAction;
+            PlayerInputController.Instance.OnInteractAction += PlayerInputControllerOnOnInteractAction;
+            PlayerInputController.Instance.OnInteractAlternateAction += PlayerInputControllerOnOnInteractAlternateAction;
         }
 
         private void PlayerInputControllerOnOnInteractAlternateAction(object sender, EventArgs e)
@@ -66,13 +65,14 @@ namespace Controller
 
         private void Update()
         {
+            if(!IsOwner) return;
             HandleMovement();
             HandleInteraction();
         }
 
         private void HandleMovement()
         {
-            Vector3 inputVectorNormalized = playerInputController.GetMovementVectorNormalized();
+            Vector3 inputVectorNormalized = PlayerInputController.Instance.GetMovementVectorNormalized();
             var moveDir = new Vector3(inputVectorNormalized.x, 0, inputVectorNormalized.y);
             var moveDistance = speed * Time.deltaTime;
          
@@ -108,7 +108,7 @@ namespace Controller
 
         private void HandleInteraction()
         {
-            Vector3 inputVectorNormalized = playerInputController.GetMovementVectorNormalized();
+            Vector3 inputVectorNormalized = PlayerInputController.Instance.GetMovementVectorNormalized();
             var moveDir = new Vector3(inputVectorNormalized.x, 0, inputVectorNormalized.y);
             
             const float interactionDistance = 2f;
