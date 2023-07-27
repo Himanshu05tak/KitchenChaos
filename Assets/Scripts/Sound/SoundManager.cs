@@ -27,7 +27,7 @@ namespace Sound
             DeliveryManager.Instance.OnRecipeSuccess += DeliveryManagerOnRecipeSuccess;
             DeliveryManager.Instance.OnRecipeFailed += DeliveryManagerOnRecipeFailed;
             CuttingCounter.OnAnyCut += CuttingCounterOnOnAnyCut;
-            //Player.Instance.OnPickSomething += PlayerOnPickSomething;
+            Player.OnAnyPickedSomething += PlayerOnPickSomething;
             BaseCounter.OnAnyObjectPlacedHere += BaseCounterOnAnyObjectPlacedHere;
             TrashCounter.OnAnyObjectTrashed += TrashCounterOnOnAnyObjectTrashed;
         }
@@ -46,7 +46,8 @@ namespace Sound
 
         private void PlayerOnPickSomething(object sender, EventArgs e)
         {
-            //PlaySound(audioClipRefsSo.objectPickup, Player.Instance.transform.position);
+            var player = sender as Player;
+            if (player != null) PlaySound(audioClipRefsSo.objectPickup, player.transform.position);
         }
 
         private void CuttingCounterOnOnAnyCut(object sender, EventArgs e)

@@ -1,3 +1,4 @@
+using Controller;
 using Counters.KitchenCounters;
 using UnityEngine;
 
@@ -7,5 +8,7 @@ public class ResetDataStaticManager : MonoBehaviour
     {
         CuttingCounter.ResetStaticData();
         BaseCounter.ResetStaticData();
+        TrashCounter.ResetStaticData();
+        Player.ResetStaticData();
     }
 }

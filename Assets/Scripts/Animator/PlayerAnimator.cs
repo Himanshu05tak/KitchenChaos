@@ -1,9 +1,10 @@
 using Controller;
+using Unity.Netcode;
 using UnityEngine;
 
 namespace Animator
 {
-    public class PlayerAnimator : MonoBehaviour
+    public class PlayerAnimator : NetworkBehaviour
     {
         [SerializeField] private Player playerController;
        
@@ -17,7 +18,8 @@ namespace Animator
         }
         private void Update()
         {
-            //_animator.SetBool(Walking,playerController.IsWalking());
+            if(!IsOwner) return;
+            _animator.SetBool(Walking,playerController.IsWalking());
         }
     }
 }

@@ -5,31 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/NetworkAssets.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/NetworkAssets/NetworkPrefabsList.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/NetworkAssets/NetworkPrefabsList.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Client.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Client/ClientNetworkTransform.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Client/ClientNetworkTransform.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TestingCodeUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TestingCodeUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Player.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Player/Player.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animator/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animator/PlayerAnimator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/CounterVisuals/SelectedCounterVisual.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/CounterVisuals/SelectedCounterVisual.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/PlayerInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/PlayerInputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Deliver/DeliveryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Deliver/DeliveryManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ResetDataStaticManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ResetDataStaticManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Animations/DeliveryResultUI_Popup.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Animations/DeliveryResultUI_Popup.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,8 +58,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/TestingCodeUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/TutorialUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TestScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.6.1/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.6.1/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.5.1/Runtime/Connection/NetworkConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.5.1/Runtime/Logging/NetworkLog.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -195,6 +178,7 @@
       <workItem from="1689756895773" duration="8953000" />
       <workItem from="1689844654592" duration="9171000" />
       <workItem from="1690368266954" duration="3650000" />
+      <workItem from="1690458702267" duration="994000" />
     </task>
     <task id="LOCAL-00002" summary="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System">
       <option name="closed" value="true" />
@@ -397,6 +381,17 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

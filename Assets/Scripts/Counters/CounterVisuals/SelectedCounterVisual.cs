@@ -1,3 +1,4 @@
+using System;
 using Controller;
 using Counters.KitchenCounters;
 using UnityEngine;
@@ -10,7 +11,16 @@ namespace Counters.CounterVisuals
         [SerializeField] private GameObject[] visualGameObjectArray;
         private void Start()
         {
-            //Player.Instance.OnSelectedCounterCharged += InstanceOnOnSelectedCounterCharged;
+            if(Player.LocalInstance!=null)
+                Player.LocalInstance.OnSelectedCounterCharged += InstanceOnOnSelectedCounterCharged;
+            Player.OnAnyPlayerSpawned += OnAnyPlayerSpawned;
+        }
+
+        private void OnAnyPlayerSpawned(object sender, EventArgs e)
+        {
+            if (Player.LocalInstance == null) return;
+            Player.LocalInstance.OnSelectedCounterCharged -= InstanceOnOnSelectedCounterCharged;
+            Player.LocalInstance.OnSelectedCounterCharged += InstanceOnOnSelectedCounterCharged;
         }
 
         private void InstanceOnOnSelectedCounterCharged(object sender, Player.OnSelectedCounterChangedEventArgs e)

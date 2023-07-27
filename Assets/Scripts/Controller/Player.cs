@@ -10,9 +10,15 @@ namespace Controller
 {
     public class Player : NetworkBehaviour, IKitchenObjectParent
     {
-        //public static Player Instance { get; private set; }
+        public static Player LocalInstance { get; private set; }
         public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterCharged;
 
+        public static event EventHandler OnAnyPlayerSpawned;
+        public static event EventHandler OnAnyPickedSomething;
+        public static void ResetStaticData()
+        {
+            OnAnyPlayerSpawned = null;
+        }
         public event EventHandler OnPickSomething;
         public class OnSelectedCounterChangedEventArgs : EventArgs
         {
@@ -24,25 +30,23 @@ namespace Controller
         [SerializeField] private LayerMask layerMask;
         [SerializeField] private Transform kitchenObjectHoldPoint;
 
-
-        private Transform _transform;
+        
         private bool _isWalking;
         private Vector3 _lastInteraction;
         private BaseCounter _selectedCounter;
         private KitchenObject.KitchenObject _kitchenObject;
         
-        private void Awake()
-        {
-            // if(Instance!=null)
-            //     Debug.LogError("There is more than one player instance");
-            // Instance = this;
-            _transform = GetComponent<Transform>();
-        }
-
         private void Start()
         {
             PlayerInputController.Instance.OnInteractAction += PlayerInputControllerOnOnInteractAction;
             PlayerInputController.Instance.OnInteractAlternateAction += PlayerInputControllerOnOnInteractAlternateAction;
+        }
+
+        public override void OnNetworkSpawn()
+        {
+            base.OnNetworkSpawn();
+            if (IsOwner) LocalInstance = this;
+            OnAnyPlayerSpawned?.Invoke(this,EventArgs.Empty);
         }
 
         private void PlayerInputControllerOnOnInteractAlternateAction(object sender, EventArgs e)
@@ -101,9 +105,9 @@ namespace Controller
                 }
             }
             if(CanMove(moveDir,moveDistance))
-                _transform.position += moveDir * moveDistance;
+                transform.position += moveDir * moveDistance;
             _isWalking = moveDir != Vector3.zero;
-            _transform.forward = Vector3.Slerp(transform.forward,moveDir,smoothRotation*Time.deltaTime);
+            transform.forward = Vector3.Slerp(transform.forward,moveDir,smoothRotation*Time.deltaTime);
         }
 
         private void HandleInteraction()
@@ -132,7 +136,7 @@ namespace Controller
         {
             const int playerHeight = 2;
             const float playerRadius = .7f;
-            return !Physics.CapsuleCast(_transform.position, transform.position + Vector3.up * playerHeight,
+            return !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight,
                 playerRadius, moveDir, moveDistance);
         }
 
@@ -154,8 +158,9 @@ namespace Controller
         public void SetKitchenObject(KitchenObject.KitchenObject kitchenObject)
         {
             _kitchenObject = kitchenObject;
-            if(kitchenObject!=null)
-                OnPickSomething?.Invoke(this,EventArgs.Empty);
+            if (kitchenObject == null) return;
+            OnPickSomething?.Invoke(this,EventArgs.Empty);
+            OnAnyPickedSomething?.Invoke(this,EventArgs.Empty);
         }
 
         public KitchenObject.KitchenObject GetKitchenObject()
