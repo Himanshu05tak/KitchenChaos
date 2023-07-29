@@ -7,7 +7,7 @@ using UnityEngine;
 namespace Counters.KitchenCounters
 {
     public class ContainerCounter : BaseCounter
-    {
+    { 
         [SerializeField] private KitchenObjectSO kitchenObjectSo;
         public event EventHandler OnPlayerGrabObject;
         public override void Interact(Player player)
