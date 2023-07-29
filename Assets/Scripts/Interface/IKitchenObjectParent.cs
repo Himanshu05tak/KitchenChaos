@@ -1,3 +1,4 @@
+using Unity.Netcode;
 using UnityEngine;
 
 namespace Interface
@@ -13,5 +14,7 @@ namespace Interface
         public void ClearKitchenObject();
 
         public bool HasKitchenObject();
+
+        public NetworkObject GetNetworkObject();
     }
 }

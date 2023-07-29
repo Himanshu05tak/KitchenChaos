@@ -177,5 +177,10 @@ namespace Controller
         {
             return _kitchenObject!=null;
         }
+
+        public NetworkObject GetNetworkObject()
+        {
+            return NetworkObject;
+        }
     }
 }

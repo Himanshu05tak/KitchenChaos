@@ -5,16 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/KitchenItemList.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/KitchenItemList/KitchenObjectList.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/KitchenItemList/KitchenObjectList.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FollowTransform.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FollowTransform.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/KitchenObjectListSO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/KitchenObjectListSO.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animator/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animator/PlayerAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/NetworkAssets/NetworkPrefabsList.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/NetworkAssets/NetworkPrefabsList.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/CounterVisuals/SelectedCounterVisual.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/CounterVisuals/SelectedCounterVisual.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Deliver/DeliveryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Deliver/DeliveryManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ResetDataStaticManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ResetDataStaticManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/BaseCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/BaseCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/ContainerCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/ContainerCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateKitchenObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateKitchenObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interface/IKitchenObjectParent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IKitchenObjectParent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KitchenObject/KitchenObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KitchenObject/KitchenObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeListSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeListSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/ClearCounter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/ClearCounter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/ContainerCounter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/ContainerCounter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/ContainerCounter_Bread.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/ContainerCounter_Bread.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/ContainerCounter_Cabbage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/ContainerCounter_Cabbage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/ContainerCounter_CheeseBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/ContainerCounter_CheeseBlock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/CuttingCounter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/CuttingCounter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/DeliveryCounter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/DeliveryCounter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/PlatesCounter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/PlatesCounter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/StoveCounter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/StoveCounter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/TrashCounter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Counters/TrashCounter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/Bread.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/Bread.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/Cabbage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/Cabbage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/Cabbage_Slices.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/Cabbage_Slices.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/CheeseBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/CheeseBlock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/CheeseSlices.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/CheeseSlices.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/MeatPattyBurned.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/MeatPattyBurned.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/MeatPattyCooked.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/MeatPattyCooked.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/MeatPattyUncooked.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/MeatPattyUncooked.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/Plate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/Plate.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/Tomato.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/Tomato.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/Tomato_Slices.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/KitchenObjects/Tomato_Slices.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +70,19 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animator/PlayerAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Client/ClientNetworkTransform.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Counters/KitchenCounters/BaseCounter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateCompleteVisual.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IHasProgress.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Interface/IKitchenObjectParent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/KitchenObject/KitchenObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ResetDataStaticManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/AudioClipRefsSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BurningRecipeSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/FryingRecipeSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/KitchenObjectListSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/KitchenObjectSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeListSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -58,8 +96,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/TestingCodeUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/TutorialUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TestScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.5.1/Runtime/Connection/NetworkConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.5.1/Runtime/Logging/NetworkLog.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.6.1/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
   <component name="ProjectId" id="2S16rQVyilwO0nj4rhPaqIQAYuZ" />
@@ -178,7 +215,10 @@
       <workItem from="1689756895773" duration="8953000" />
       <workItem from="1689844654592" duration="9171000" />
       <workItem from="1690368266954" duration="3650000" />
-      <workItem from="1690458702267" duration="994000" />
+      <workItem from="1690458702267" duration="3077000" />
+      <workItem from="1690539673885" duration="8630000" />
+      <workItem from="1690561277377" duration="922000" />
+      <workItem from="1690631200148" duration="5690000" />
     </task>
     <task id="LOCAL-00002" summary="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System">
       <option name="closed" value="true" />
@@ -372,7 +412,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689860553061</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="- Synchronous Player Animation&#10;- In Player.cs has two ClientRpc and ServerRpc to handle Deliver Recipe and Recipe Spawn.&#10;- SelectedCounterVisual.cs has fixed and Implemented LocalInstance for each Players.&#10;- In Player.cs has two Static Events for Fire off during Pickup and Highlight Counter">
+      <option name="closed" value="true" />
+      <created>1690459983236</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1690459983236</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +443,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Removed unnecessary animation files" />
     <MESSAGE value="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System" />
     <MESSAGE value="implemented Collision detection" />
     <MESSAGE value="Implemented CounterInteract" />
@@ -420,7 +467,8 @@
     <MESSAGE value="- Implemented GamePad controller and Selected Btn while switching Keyboard to Mouse.&#10;- OptionUI.cs and PlayerInputController.cs have relevant functions&#10;- GamePauseUI.cs contains all the essential btn and Text to show up" />
     <MESSAGE value="- Polish Stage&#10;- Added Walls on GamePlay.unity&#10;- Added Animation on Count Down Number and Sound&#10;- Added TutorialUI.cs &#10;- Remove Time logic from Start off the game and Set using GameState in GameManager.cs and PlatesCounter.cs&#10;- Checking a condition if GameState == GamePlay on DeliveryManager.cs" />
     <MESSAGE value="- In StoveCounter implemented Warning Sound, Icon and Animation using StoveBurnWarningUI.cs&#10;- In DeliveryManager implemented dynamic popup and Animation using DeliveryResultUI.cs&#10;-" />
-    <option name="LAST_COMMIT_MESSAGE" value="- In StoveCounter implemented Warning Sound, Icon and Animation using StoveBurnWarningUI.cs&#10;- In DeliveryManager implemented dynamic popup and Animation using DeliveryResultUI.cs&#10;-" />
+    <MESSAGE value="- Synchronous Player Animation&#10;- In Player.cs has two ClientRpc and ServerRpc to handle Deliver Recipe and Recipe Spawn.&#10;- SelectedCounterVisual.cs has fixed and Implemented LocalInstance for each Players.&#10;- In Player.cs has two Static Events for Fire off during Pickup and Highlight Counter" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Synchronous Player Animation&#10;- In Player.cs has two ClientRpc and ServerRpc to handle Deliver Recipe and Recipe Spawn.&#10;- SelectedCounterVisual.cs has fixed and Implemented LocalInstance for each Players.&#10;- In Player.cs has two Static Events for Fire off during Pickup and Highlight Counter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

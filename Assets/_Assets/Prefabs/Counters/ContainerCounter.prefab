@@ -84,6 +84,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 538432996944910788}
+    - targetCorrespondingSourceObject: {fileID: 2809564519704344095, guid: 5f0df02c5e9fe384dbba192b2daaac29,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1059860214016220116}
   m_SourcePrefab: {fileID: 100100000, guid: 5f0df02c5e9fe384dbba192b2daaac29, type: 3}
 --- !u!4 &625269389486139824 stripped
 Transform:
@@ -110,7 +114,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counterTopPoint: {fileID: 625269389486139824}
-  tomatoPrefab: {fileID: 11400000, guid: eda908ac9e8e21a49a53ecd8c97ed3ad, type: 2}
+  kitchenObjectSo: {fileID: 0}
+--- !u!114 &-1059860214016220116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2847543940938304567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!4 &5023118126756752822 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4957519231108011934, guid: 5f0df02c5e9fe384dbba192b2daaac29,

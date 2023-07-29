@@ -1,11 +1,12 @@
 using System;
 using Controller;
 using Interface;
+using Unity.Netcode;
 using UnityEngine;
 
 namespace Counters.KitchenCounters
 {
-    public abstract class BaseCounter : MonoBehaviour, IKitchenObjectParent
+    public abstract class BaseCounter : NetworkBehaviour, IKitchenObjectParent
     {
         public static event EventHandler OnAnyObjectPlacedHere;
         public abstract void Interact(Player player);
@@ -45,6 +46,10 @@ namespace Counters.KitchenCounters
         public static void ResetStaticData()
         {
             OnAnyObjectPlacedHere = null;
+        }
+        public NetworkObject GetNetworkObject()
+        {
+            return NetworkObject;
         }
     }
 }

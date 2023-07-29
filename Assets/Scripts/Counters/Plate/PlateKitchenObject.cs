@@ -17,8 +17,9 @@ namespace Counters.Plate
         [SerializeField] private List<KitchenObjectSO> validKitchenObjectSos;
         private List<KitchenObjectSO> _kitchenObjectSos;
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             _kitchenObjectSos = new List<KitchenObjectSO>();
         }
 

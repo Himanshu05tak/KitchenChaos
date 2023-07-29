@@ -1,6 +1,7 @@
 using System;
 using Controller;
 using ScriptableObjects;
+using Unity.Netcode;
 using UnityEngine;
 
 namespace Counters.KitchenCounters
@@ -14,6 +15,19 @@ namespace Counters.KitchenCounters
             if (player.HasKitchenObject()) return;
             //Player isn't carrying anything
             KitchenObject.KitchenObject.SpawnKitchenObject(kitchenObjectSo, player);
+
+            InteractLogicServerRpc();
+        }
+
+        [ServerRpc(RequireOwnership = false)]
+        private void InteractLogicServerRpc()
+        {
+            InteractLogicClientRpc();
+        }
+
+        [ClientRpc]
+        private void InteractLogicClientRpc()
+        {
             OnPlayerGrabObject?.Invoke(this,EventArgs.Empty);
         }
     }

@@ -978,6 +978,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1222763002774825455}
+    - targetCorrespondingSourceObject: {fileID: 2809564519704344095, guid: 5f0df02c5e9fe384dbba192b2daaac29,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8193642531717301879}
   m_SourcePrefab: {fileID: 100100000, guid: 5f0df02c5e9fe384dbba192b2daaac29, type: 3}
 --- !u!4 &1509915828135209665 stripped
 Transform:
@@ -1015,3 +1019,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7aa6ff7091075c642b13522809ba36e3, type: 2}
   burningRecipeSoArray:
   - {fileID: 11400000, guid: 47f1b062f3819cf419fe0baf4eba8cf4, type: 2}
+--- !u!114 &-8193642531717301879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8558384106434841408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
