@@ -1,4 +1,3 @@
-using System;
 using Interface;
 using UnityEngine;
 using Unity.Netcode;
@@ -49,8 +48,12 @@ namespace KitchenObject
 
         public void DestroySelf()
         {
-            _kitchenObjectParent.ClearKitchenObject();
             Destroy(gameObject);
+        }
+
+        public void ClearKitchenObjectParent()
+        {
+            _kitchenObjectParent.ClearKitchenObject();
         }
 
         public bool TryGetPlate(out PlateKitchenObject plateKitchenObject)
@@ -67,6 +70,11 @@ namespace KitchenObject
         public static void SpawnKitchenObject(KitchenObjectSO kitchenObjectSo, IKitchenObjectParent parent)
         {
             KitchenGameMultiplayer.Instance.SpawnKitchenObject(kitchenObjectSo, parent);
+        }
+        
+        public static void DestroyKitchenObject(KitchenObject kitchenObject)
+        {
+            KitchenGameMultiplayer.Instance.DestroyKitchenObject(kitchenObject);
         }
         public IKitchenObjectParent GetKitchenObjectParent => _kitchenObjectParent;
     }

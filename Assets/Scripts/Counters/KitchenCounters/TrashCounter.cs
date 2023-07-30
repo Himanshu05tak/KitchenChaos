@@ -1,5 +1,6 @@
 using System;
 using Controller;
+using Unity.Netcode;
 
 namespace Counters.KitchenCounters
 {
@@ -9,13 +10,26 @@ namespace Counters.KitchenCounters
         public override void Interact(Player player)
         {
             if (!player.HasKitchenObject()) return;
-            player.GetKitchenObject().DestroySelf();
-            OnAnyObjectTrashed?.Invoke(this,EventArgs.Empty);
+            KitchenObject.KitchenObject.DestroyKitchenObject(player.GetKitchenObject());
+            
+            InteractLogicServerRpc();
         }
         
         public new static void ResetStaticData()
         {
             OnAnyObjectTrashed = null;
+        }
+
+        [ServerRpc(RequireOwnership = false)]
+        private void InteractLogicServerRpc()
+        {
+            InteractLogicClientRpc();
+        }
+        
+        [ClientRpc]
+        private void InteractLogicClientRpc()
+        {
+            OnAnyObjectTrashed?.Invoke(this,EventArgs.Empty);
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Counters.Deliver
 
             if (!player.GetKitchenObject().TryGetPlate(out var plateKitchenObject)) return;
             DeliveryManager.Instance.DeliverRecipe(plateKitchenObject);
-            player.GetKitchenObject().DestroySelf();
+            KitchenObject.KitchenObject.DestroyKitchenObject( player.GetKitchenObject());
         }
     }
 }
