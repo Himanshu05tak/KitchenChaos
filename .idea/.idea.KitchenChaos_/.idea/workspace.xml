@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/NetworkAssets/NetworkPrefabsList.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/NetworkAssets/NetworkPrefabsList.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Deliver/DeliveryCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Deliver/DeliveryCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/TrashCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/TrashCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KitchenObject/KitchenObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KitchenObject/KitchenObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/CuttingCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/CuttingCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,15 +32,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animator/PlayerAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Client/ClientNetworkTransform.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Counters/Deliver/DeliveryCounter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Counters/KitchenCounters/TrashCounter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateCompleteVisual.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IHasProgress.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/KitchenGameMultiplayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/KitchenObject/KitchenObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/KitchenObject/KitchenObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ResetDataStaticManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/AudioClipRefsSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -64,7 +56,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/TutorialUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TestScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.6.1/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Components/NetworkTransform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Editor/NetworkBehaviourEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Core/NetworkObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Logging/NetworkLog.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Spawning/NetworkSpawnManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
   <component name="ProjectId" id="2S16rQVyilwO0nj4rhPaqIQAYuZ" />
@@ -187,7 +183,9 @@
       <workItem from="1690539673885" duration="8630000" />
       <workItem from="1690561277377" duration="922000" />
       <workItem from="1690631200148" duration="7698000" />
-      <workItem from="1690705547128" duration="4788000" />
+      <workItem from="1690705547128" duration="5399000" />
+      <workItem from="1690803758945" duration="12561000" />
+      <workItem from="1690888454451" duration="8197000" />
     </task>
     <task id="LOCAL-00002" summary="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System">
       <option name="closed" value="true" />
@@ -405,7 +403,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690639258585</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="KitchenObject.cs has implemented&#10;KitchenGameMultiplayer.cs has Implemented a Static Function for DestroyKitchenObjectServerRpc and ClearKitchenObjectOnParentClientRpc which are going to handle Ownership for Server.&#10;TrashCounter.cs has Implemented and Separated logic for ServerRpc and ClientRpc in order to Destroy Network Object.&#10;DeliveryCounter.cs Instead of DestroySelf and DestroyKitchenObject from Server">
+      <option name="closed" value="true" />
+      <created>1690710995067</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1690710995067</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +434,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Implemented CounterInteract" />
     <MESSAGE value="Implemented EventHandler for Interact &#10;Updated Visual counter" />
     <MESSAGE value="- Implemented Scriptable Object for having multiple type of kitchenObjects&#10;- Implemented Interface for carry kitchenObject to Player.cs&#10;- Player can spawn Kitchen Object over Clearcounter" />
     <MESSAGE value="- Refactor ClearCounter and ContainerCounter into BaseCounter and It has implemented Interface.&#10;- Container has Visual and Animation script attached to it.&#10;- Refactor ClearCounter and ContainerCounter derived from base class called BaseContainer using Prefab Variant" />
@@ -453,7 +458,8 @@
     <MESSAGE value="- Synchronous Player Animation&#10;- In Player.cs has two ClientRpc and ServerRpc to handle Deliver Recipe and Recipe Spawn.&#10;- SelectedCounterVisual.cs has fixed and Implemented LocalInstance for each Players.&#10;- In Player.cs has two Static Events for Fire off during Pickup and Highlight Counter" />
     <MESSAGE value="- Synchronous Picking Object and Kitchen Parent Object.&#10;- BaseCounter.cs and KitchenObject.cs are derived from NetworkBehaviour in order to work with ServerRpc and ClientRpc.&#10;- FollowTransform.cs It's just a transform to follow up for kitchenObject.&#10;- KitchenGameMultiplayer.cs It handle SpawnKitchenObject on Server with few helper functions.&#10;- KitchenObjectListSO.cs.cs It does contain all of the KitchenObjects Prefab," />
     <MESSAGE value="- Synchronous Plates Spawn and Remove&#10;- PlatesCounter.cs does implement ServerRpc and ClientRpc in order to work together." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Synchronous Plates Spawn and Remove&#10;- PlatesCounter.cs does implement ServerRpc and ClientRpc in order to work together." />
+    <MESSAGE value="KitchenObject.cs has implemented&#10;KitchenGameMultiplayer.cs has Implemented a Static Function for DestroyKitchenObjectServerRpc and ClearKitchenObjectOnParentClientRpc which are going to handle Ownership for Server.&#10;TrashCounter.cs has Implemented and Separated logic for ServerRpc and ClientRpc in order to Destroy Network Object.&#10;DeliveryCounter.cs Instead of DestroySelf and DestroyKitchenObject from Server" />
+    <option name="LAST_COMMIT_MESSAGE" value="KitchenObject.cs has implemented&#10;KitchenGameMultiplayer.cs has Implemented a Static Function for DestroyKitchenObjectServerRpc and ClearKitchenObjectOnParentClientRpc which are going to handle Ownership for Server.&#10;TrashCounter.cs has Implemented and Separated logic for ServerRpc and ClientRpc in order to Destroy Network Object.&#10;DeliveryCounter.cs Instead of DestroySelf and DestroyKitchenObject from Server" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
