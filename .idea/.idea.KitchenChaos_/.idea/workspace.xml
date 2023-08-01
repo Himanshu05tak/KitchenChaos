@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="">
+    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="- Synchronous CuttingCounter.cs &#10;- Separated logic for ServerRpc and Client Rpc&#10;            - Created InteractLogicPlaceObjectOnCounterServerRpc() and InteractLogicPlaceObjectOnCounterClientRpc() are Resetting CuttingProgress&#10;            - Created CutObjectServerRpc() and CutObjectClientRpc() for cutting  &#10;            - Created TestCuttingProgressDoneServerRpc() This is actually handling Destroy and Spawn.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/CuttingCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/CuttingCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/StoveCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/StoveCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +32,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animator/PlayerAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Client/ClientNetworkTransform.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Counters/KitchenCounters/CuttingCounter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateCompleteVisual.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IHasProgress.cs" root0="FORCE_HIGHLIGHTING" />
@@ -61,6 +62,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Core/NetworkObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Logging/NetworkLog.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Spawning/NetworkSpawnManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
   <component name="ProjectId" id="2S16rQVyilwO0nj4rhPaqIQAYuZ" />
@@ -71,28 +73,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.smartKeys_rider&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TODO_SCOPE": "All Places",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.smartKeys_rider",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\rockh\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\rockh\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\rockh\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\rockh\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\rockh\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\rockh\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Build/Build_V_0.1\KitchenChaos.exe" />
@@ -185,7 +188,7 @@
       <workItem from="1690631200148" duration="7698000" />
       <workItem from="1690705547128" duration="5399000" />
       <workItem from="1690803758945" duration="12561000" />
-      <workItem from="1690888454451" duration="8197000" />
+      <workItem from="1690888454451" duration="12679000" />
     </task>
     <task id="LOCAL-00002" summary="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System">
       <option name="closed" value="true" />
@@ -411,7 +414,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690710995067</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="- Synchronous CuttingCounter.cs &#10;- Separated logic for ServerRpc and Client Rpc&#10;            - Created InteractLogicPlaceObjectOnCounterServerRpc() and InteractLogicPlaceObjectOnCounterClientRpc() are Resetting CuttingProgress&#10;            - Created CutObjectServerRpc() and CutObjectClientRpc() for cutting  &#10;            - Created TestCuttingProgressDoneServerRpc() This is actually handling Destroy and Spawn.">
+      <option name="closed" value="true" />
+      <created>1690902724245</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1690902724245</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,7 +445,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Implemented EventHandler for Interact &#10;Updated Visual counter" />
     <MESSAGE value="- Implemented Scriptable Object for having multiple type of kitchenObjects&#10;- Implemented Interface for carry kitchenObject to Player.cs&#10;- Player can spawn Kitchen Object over Clearcounter" />
     <MESSAGE value="- Refactor ClearCounter and ContainerCounter into BaseCounter and It has implemented Interface.&#10;- Container has Visual and Animation script attached to it.&#10;- Refactor ClearCounter and ContainerCounter derived from base class called BaseContainer using Prefab Variant" />
     <MESSAGE value="- Fixed movement direction issue while rotating towards clear counter&#10;- Implemented Cutting Counter and logic&#10;-" />
@@ -459,7 +469,8 @@
     <MESSAGE value="- Synchronous Picking Object and Kitchen Parent Object.&#10;- BaseCounter.cs and KitchenObject.cs are derived from NetworkBehaviour in order to work with ServerRpc and ClientRpc.&#10;- FollowTransform.cs It's just a transform to follow up for kitchenObject.&#10;- KitchenGameMultiplayer.cs It handle SpawnKitchenObject on Server with few helper functions.&#10;- KitchenObjectListSO.cs.cs It does contain all of the KitchenObjects Prefab," />
     <MESSAGE value="- Synchronous Plates Spawn and Remove&#10;- PlatesCounter.cs does implement ServerRpc and ClientRpc in order to work together." />
     <MESSAGE value="KitchenObject.cs has implemented&#10;KitchenGameMultiplayer.cs has Implemented a Static Function for DestroyKitchenObjectServerRpc and ClearKitchenObjectOnParentClientRpc which are going to handle Ownership for Server.&#10;TrashCounter.cs has Implemented and Separated logic for ServerRpc and ClientRpc in order to Destroy Network Object.&#10;DeliveryCounter.cs Instead of DestroySelf and DestroyKitchenObject from Server" />
-    <option name="LAST_COMMIT_MESSAGE" value="KitchenObject.cs has implemented&#10;KitchenGameMultiplayer.cs has Implemented a Static Function for DestroyKitchenObjectServerRpc and ClearKitchenObjectOnParentClientRpc which are going to handle Ownership for Server.&#10;TrashCounter.cs has Implemented and Separated logic for ServerRpc and ClientRpc in order to Destroy Network Object.&#10;DeliveryCounter.cs Instead of DestroySelf and DestroyKitchenObject from Server" />
+    <MESSAGE value="- Synchronous CuttingCounter.cs &#10;- Separated logic for ServerRpc and Client Rpc&#10;            - Created InteractLogicPlaceObjectOnCounterServerRpc() and InteractLogicPlaceObjectOnCounterClientRpc() are Resetting CuttingProgress&#10;            - Created CutObjectServerRpc() and CutObjectClientRpc() for cutting  &#10;            - Created TestCuttingProgressDoneServerRpc() This is actually handling Destroy and Spawn." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Synchronous CuttingCounter.cs &#10;- Separated logic for ServerRpc and Client Rpc&#10;            - Created InteractLogicPlaceObjectOnCounterServerRpc() and InteractLogicPlaceObjectOnCounterClientRpc() are Resetting CuttingProgress&#10;            - Created CutObjectServerRpc() and CutObjectClientRpc() for cutting  &#10;            - Created TestCuttingProgressDoneServerRpc() This is actually handling Destroy and Spawn." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
