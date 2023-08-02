@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using ScriptableObjects;
 using System.Collections.Generic;
+using Unity.Netcode;
 
 namespace Counters.Plate
 {
@@ -27,13 +28,26 @@ namespace Counters.Plate
         {
             if (!validKitchenObjectSos.Contains(kitchenObjectSo)) return false;
             if (_kitchenObjectSos.Contains(kitchenObjectSo)) return false;
-            _kitchenObjectSos.Add(kitchenObjectSo);
-            OnIngredientAdded?.Invoke(this, new OnIngredientAddedEventArgs { KitchenObjectSo = kitchenObjectSo });
+            AddIngredientServerRpc(KitchenGameMultiplayer.Instance.GetKitchenObjectSoIndex(kitchenObjectSo));
+           
             return true;
         }
         public List<KitchenObjectSO> GetKitchenObjectSoList()
         {
             return _kitchenObjectSos;
         }
+        
+        [ServerRpc(RequireOwnership = false)]
+        private void AddIngredientServerRpc(int kitchenObjectSoIndex)
+        {
+            AddIngredientClientRpc(kitchenObjectSoIndex);
+        } 
+        [ClientRpc]
+        private void AddIngredientClientRpc(int kitchenObjectSoIndex)
+        {
+            var kitchenObjectSo = KitchenGameMultiplayer.Instance.GetKitchenObjectSoFromIndex(kitchenObjectSoIndex);
+            _kitchenObjectSos.Add(kitchenObjectSo);
+            OnIngredientAdded?.Invoke(this, new OnIngredientAddedEventArgs { KitchenObjectSo = kitchenObjectSo });
+        } 
     }
 }

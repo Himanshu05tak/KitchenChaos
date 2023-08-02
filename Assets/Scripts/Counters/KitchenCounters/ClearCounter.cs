@@ -1,4 +1,5 @@
 using Controller;
+using Unity.Netcode;
 
 namespace Counters.KitchenCounters
 {
@@ -29,7 +30,7 @@ namespace Counters.KitchenCounters
                     {
                         //player is holding a plate
                         if (plateKitchenObject.TryAddIngredient(GetKitchenObject().GetKitchenObjectSo))
-                            GetKitchenObject().DestroySelf();
+                            KitchenObject.KitchenObject.DestroyKitchenObject(GetKitchenObject());
                     }
                     else
                     {
@@ -37,7 +38,7 @@ namespace Counters.KitchenCounters
                         if (!GetKitchenObject().TryGetPlate(out plateKitchenObject)) return;
                         if (plateKitchenObject.TryAddIngredient(player.GetKitchenObject().GetKitchenObjectSo))
                         {
-                            player.GetKitchenObject().DestroySelf();
+                            KitchenObject.KitchenObject.DestroyKitchenObject(player.GetKitchenObject());
                         }
                     }
                 }

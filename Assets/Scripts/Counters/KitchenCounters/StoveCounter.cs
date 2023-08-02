@@ -78,14 +78,15 @@ namespace Counters.KitchenCounters
                     {
                         KitchenObject.KitchenObject.DestroyKitchenObject(GetKitchenObject());
                         KitchenObject.KitchenObject.SpawnKitchenObject(_fryingRecipeSo.output, this);
+                        
                         _fryingState.Value = FryingState.Fried;
                         _burningTimer.Value = 0f;
                         SetBurningRecipeSoClientRpc(KitchenGameMultiplayer.Instance.GetKitchenObjectSoIndex(GetKitchenObject().GetKitchenObjectSo));
                     } 
                     break;
                 case FryingState.Fried:
-                    
                     _burningTimer.Value += Time.deltaTime;
+                    
                     if (_burningTimer.Value > _burningRecipeSo.burningTimerMax)
                     {
                         //Fried
@@ -127,8 +128,9 @@ namespace Counters.KitchenCounters
                     if (!player.GetKitchenObject().TryGetPlate(out var plateKitchenObject)) return;
                     //Player is holding a plate
                     if (plateKitchenObject.TryAddIngredient(GetKitchenObject().GetKitchenObjectSo))
-                        GetKitchenObject().DestroySelf();
-                    _fryingState.Value = FryingState.Idle;
+                        KitchenObject.KitchenObject.DestroyKitchenObject(GetKitchenObject());
+                    
+                    SetStateIdleServerRpc();
                 }
                 else
                 {
@@ -144,7 +146,6 @@ namespace Counters.KitchenCounters
         private void SetStateIdleServerRpc()
         {
             _fryingState.Value = FryingState.Idle;
-
         }
         
         [ServerRpc(RequireOwnership = false)]
