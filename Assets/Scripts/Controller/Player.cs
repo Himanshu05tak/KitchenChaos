@@ -1,10 +1,12 @@
 using Input;
 using System;
+using System.Collections.Generic;
 using Manager;
 using Counters.KitchenCounters;
 using Interface;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Controller
 {
@@ -27,8 +29,10 @@ namespace Controller
 
         [SerializeField] private float speed;
         [SerializeField] private float smoothRotation;
-        [SerializeField] private LayerMask layerMask;
+        [SerializeField] private LayerMask counterLayerMask;
+        [SerializeField] private LayerMask collisionLayerMask;
         [SerializeField] private Transform kitchenObjectHoldPoint;
+        [SerializeField] private List<Vector3> spawnPositionList;
 
         
         private bool _isWalking;
@@ -46,6 +50,8 @@ namespace Controller
         {
             base.OnNetworkSpawn();
             if (IsOwner) LocalInstance = this;
+
+            transform.position = spawnPositionList[(int)OwnerClientId];
             OnAnyPlayerSpawned?.Invoke(this,EventArgs.Empty);
         }
 
@@ -119,7 +125,7 @@ namespace Controller
 
             if (moveDir != Vector3.zero)
                 _lastInteraction = moveDir;
-            var isInteract = Physics.Raycast(transform.position, _lastInteraction, out var hitInfo, interactionDistance,layerMask);
+            var isInteract = Physics.Raycast(transform.position, _lastInteraction, out var hitInfo, interactionDistance,counterLayerMask);
 
             if (isInteract && hitInfo.transform.TryGetComponent(out BaseCounter baseCounter))
             {
@@ -136,8 +142,8 @@ namespace Controller
         {
             const int playerHeight = 2;
             const float playerRadius = .7f;
-            return !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight,
-                playerRadius, moveDir, moveDistance);
+            return !Physics.BoxCast(transform.position, Vector3.one * playerRadius,
+                moveDir, Quaternion.identity, moveDistance, collisionLayerMask);
         }
 
         public bool IsWalking()

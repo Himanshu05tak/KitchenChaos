@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/ClearCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/ClearCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/CuttingCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/CuttingCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/StoveCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/KitchenCounters/StoveCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateKitchenObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateKitchenObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +33,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animator/PlayerAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Client/ClientNetworkTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Counters/KitchenCounters/ClearCounter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Counters/KitchenCounters/CuttingCounter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Counters/KitchenCounters/StoveCounter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateCompleteVisual.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Counters/Plate/PlateKitchenObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IHasProgress.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -189,7 +191,7 @@
       <workItem from="1690705547128" duration="5399000" />
       <workItem from="1690803758945" duration="12561000" />
       <workItem from="1690888454451" duration="13865000" />
-      <workItem from="1690972905009" duration="4538000" />
+      <workItem from="1690972905009" duration="6989000" />
     </task>
     <task id="LOCAL-00002" summary="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System">
       <option name="closed" value="true" />
@@ -431,7 +433,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690907244108</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="- ClearCounter.cs, StoveCounter.cs and CuttingCounter.cs has Fixed Destroy kitchenObject.&#10;- PlateKitchenObject.cs now Contain Server and Client Combination in order to AddIngredient.">
+      <option name="closed" value="true" />
+      <created>1690980647593</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1690980647593</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +464,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="- Refactor ClearCounter and ContainerCounter into BaseCounter and It has implemented Interface.&#10;- Container has Visual and Animation script attached to it.&#10;- Refactor ClearCounter and ContainerCounter derived from base class called BaseContainer using Prefab Variant" />
     <MESSAGE value="- Fixed movement direction issue while rotating towards clear counter&#10;- Implemented Cutting Counter and logic&#10;-" />
     <MESSAGE value="- Implemented all type of cutting ingredients &#10;- CuttingCounter.cs which takes Input and Output&#10;- Cutting counter only works if recipe has Input and Output" />
     <MESSAGE value="- Cutting Progress bar Canvas has been implemented with various Camera Mode&#10;- Trash Counter has been implemented&#10;- Fixed - Exceptional Handled once you have cut an KitchenObject into Slices. No longer able to cut once its done&#10;- Organized Script Structure and Hierarchy Structure" />
@@ -479,7 +488,8 @@
     <MESSAGE value="KitchenObject.cs has implemented&#10;KitchenGameMultiplayer.cs has Implemented a Static Function for DestroyKitchenObjectServerRpc and ClearKitchenObjectOnParentClientRpc which are going to handle Ownership for Server.&#10;TrashCounter.cs has Implemented and Separated logic for ServerRpc and ClientRpc in order to Destroy Network Object.&#10;DeliveryCounter.cs Instead of DestroySelf and DestroyKitchenObject from Server" />
     <MESSAGE value="- Synchronous CuttingCounter.cs &#10;- Separated logic for ServerRpc and Client Rpc&#10;            - Created InteractLogicPlaceObjectOnCounterServerRpc() and InteractLogicPlaceObjectOnCounterClientRpc() are Resetting CuttingProgress&#10;            - Created CutObjectServerRpc() and CutObjectClientRpc() for cutting  &#10;            - Created TestCuttingProgressDoneServerRpc() This is actually handling Destroy and Spawn." />
     <MESSAGE value="- GetKitchenObjectSoIndex() and GetKitchenObjectSoFromIndex() has made Public in KitchenGameMultiplayer.cs&#10;- StoveCounter.cs Implemented Three NetworkVariable for _fryingState, _fryingTimer and _burningTimer in order to Synchronous with Server.&#10;               - SetStateIdleServerRpc() It handles the currentState.&#10;               - InteractLogicPlaceObjectOnCounterServerRpc()&#10;               - SetFryingRecipeSoClientRpc()&#10;               - SetBurningRecipeSoClientRpc()" />
-    <option name="LAST_COMMIT_MESSAGE" value="- GetKitchenObjectSoIndex() and GetKitchenObjectSoFromIndex() has made Public in KitchenGameMultiplayer.cs&#10;- StoveCounter.cs Implemented Three NetworkVariable for _fryingState, _fryingTimer and _burningTimer in order to Synchronous with Server.&#10;               - SetStateIdleServerRpc() It handles the currentState.&#10;               - InteractLogicPlaceObjectOnCounterServerRpc()&#10;               - SetFryingRecipeSoClientRpc()&#10;               - SetBurningRecipeSoClientRpc()" />
+    <MESSAGE value="- ClearCounter.cs, StoveCounter.cs and CuttingCounter.cs has Fixed Destroy kitchenObject.&#10;- PlateKitchenObject.cs now Contain Server and Client Combination in order to AddIngredient." />
+    <option name="LAST_COMMIT_MESSAGE" value="- ClearCounter.cs, StoveCounter.cs and CuttingCounter.cs has Fixed Destroy kitchenObject.&#10;- PlateKitchenObject.cs now Contain Server and Client Combination in order to AddIngredient." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
