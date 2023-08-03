@@ -1,7 +1,7 @@
-using System;
 using Input;
-using Manager;
 using TMPro;
+using System;
+using Manager;
 using UnityEngine;
 
 namespace UI
@@ -24,17 +24,16 @@ namespace UI
         private void Start()
         {
             PlayerInputController.Instance.OnBindingRebind += OnBindingRebind;
-            GameManager.Instance.OnStateChanged += OnStateChanged;
+            GameManager.Instance.OnLocalPlayerReadyChanged += OnLocalPlayerReadyChanged;
             UpdateVisual();
             Show();
         }
 
-        private void OnStateChanged(object sender, EventArgs e)
+        private void OnLocalPlayerReadyChanged(object sender, EventArgs e)
         {
-            if(GameManager.Instance.IsCountdownToStartActive())
-                Hide();
+           if(GameManager.Instance.IsLocalPlayerReady())
+               Hide();
         }
-
         private void OnBindingRebind(object sender, EventArgs e)
         {
             UpdateVisual();

@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="">
+    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="- Player.cs extensible for new feature using LayerMask &#10;           - CapsuleCollider has replaced with BoxCollider which helps to move on corner and won-t stuck anymore&#10;           - Implemented additional LayerMask for interaction using Trigger etc">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/WaitingForOtherPlayersUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/WaitingForOtherPlayersUI.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TutorialUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TutorialUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +35,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animator/PlayerAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Client/ClientNetworkTransform.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Counters/KitchenCounters/ClearCounter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Counters/KitchenCounters/CuttingCounter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Counters/KitchenCounters/StoveCounter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Controller/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateCompleteVisual.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Counters/Plate/PlateKitchenObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IHasProgress.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -58,13 +58,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/StoveBurnWarningUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/TestingCodeUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/TutorialUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/WaitingForOtherPlayersUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TestScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/_Assets/Prefabs/Player/Player.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.6.1/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Components/NetworkTransform.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Editor/NetworkBehaviourEditor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Core/NetworkObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Logging/NetworkLog.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.2.0/Runtime/Spawning/NetworkSpawnManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
   <component name="ProjectId" id="2S16rQVyilwO0nj4rhPaqIQAYuZ" />
@@ -192,6 +190,7 @@
       <workItem from="1690803758945" duration="12561000" />
       <workItem from="1690888454451" duration="13865000" />
       <workItem from="1690972905009" duration="6989000" />
+      <workItem from="1691053699041" duration="4313000" />
     </task>
     <task id="LOCAL-00002" summary="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System">
       <option name="closed" value="true" />
@@ -441,7 +440,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690980647593</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="- Player.cs extensible for new feature using LayerMask &#10;           - CapsuleCollider has replaced with BoxCollider which helps to move on corner and won-t stuck anymore&#10;           - Implemented additional LayerMask for interaction using Trigger etc">
+      <option name="closed" value="true" />
+      <created>1691054535641</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1691054535641</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +471,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="- Fixed movement direction issue while rotating towards clear counter&#10;- Implemented Cutting Counter and logic&#10;-" />
     <MESSAGE value="- Implemented all type of cutting ingredients &#10;- CuttingCounter.cs which takes Input and Output&#10;- Cutting counter only works if recipe has Input and Output" />
     <MESSAGE value="- Cutting Progress bar Canvas has been implemented with various Camera Mode&#10;- Trash Counter has been implemented&#10;- Fixed - Exceptional Handled once you have cut an KitchenObject into Slices. No longer able to cut once its done&#10;- Organized Script Structure and Hierarchy Structure" />
     <MESSAGE value="- Implemented StateMachine for Cooking meat to burn  &#10;- Implemented StoveCounter for cooking meat to burn&#10;- Created Scriptable Objects for Burning, Cooked and Uncooked meat &#10;- Created Prefabs for Burning, Cooked and Uncooked meat&#10;- Implemented IProgressBar which has been implemented in both Progressbar" />
@@ -489,7 +495,8 @@
     <MESSAGE value="- Synchronous CuttingCounter.cs &#10;- Separated logic for ServerRpc and Client Rpc&#10;            - Created InteractLogicPlaceObjectOnCounterServerRpc() and InteractLogicPlaceObjectOnCounterClientRpc() are Resetting CuttingProgress&#10;            - Created CutObjectServerRpc() and CutObjectClientRpc() for cutting  &#10;            - Created TestCuttingProgressDoneServerRpc() This is actually handling Destroy and Spawn." />
     <MESSAGE value="- GetKitchenObjectSoIndex() and GetKitchenObjectSoFromIndex() has made Public in KitchenGameMultiplayer.cs&#10;- StoveCounter.cs Implemented Three NetworkVariable for _fryingState, _fryingTimer and _burningTimer in order to Synchronous with Server.&#10;               - SetStateIdleServerRpc() It handles the currentState.&#10;               - InteractLogicPlaceObjectOnCounterServerRpc()&#10;               - SetFryingRecipeSoClientRpc()&#10;               - SetBurningRecipeSoClientRpc()" />
     <MESSAGE value="- ClearCounter.cs, StoveCounter.cs and CuttingCounter.cs has Fixed Destroy kitchenObject.&#10;- PlateKitchenObject.cs now Contain Server and Client Combination in order to AddIngredient." />
-    <option name="LAST_COMMIT_MESSAGE" value="- ClearCounter.cs, StoveCounter.cs and CuttingCounter.cs has Fixed Destroy kitchenObject.&#10;- PlateKitchenObject.cs now Contain Server and Client Combination in order to AddIngredient." />
+    <MESSAGE value="- Player.cs extensible for new feature using LayerMask &#10;           - CapsuleCollider has replaced with BoxCollider which helps to move on corner and won-t stuck anymore&#10;           - Implemented additional LayerMask for interaction using Trigger etc" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Player.cs extensible for new feature using LayerMask &#10;           - CapsuleCollider has replaced with BoxCollider which helps to move on corner and won-t stuck anymore&#10;           - Implemented additional LayerMask for interaction using Trigger etc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
