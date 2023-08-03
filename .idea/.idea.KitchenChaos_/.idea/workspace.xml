@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="- Player.cs extensible for new feature using LayerMask &#10;           - CapsuleCollider has replaced with BoxCollider which helps to move on corner and won-t stuck anymore&#10;           - Implemented additional LayerMask for interaction using Trigger etc">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/WaitingForOtherPlayersUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/WaitingForOtherPlayersUI.cs.meta" afterDir="false" />
+    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseMultiplayerUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseMultiplayerUI.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TutorialUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TutorialUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GamePauseUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GamePauseUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/OptionUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/OptionUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +40,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IHasProgress.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Manager/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ResetDataStaticManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/AudioClipRefsSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -190,7 +191,8 @@
       <workItem from="1690803758945" duration="12561000" />
       <workItem from="1690888454451" duration="13865000" />
       <workItem from="1690972905009" duration="6989000" />
-      <workItem from="1691053699041" duration="4313000" />
+      <workItem from="1691053699041" duration="4579000" />
+      <workItem from="1691066361992" duration="1578000" />
     </task>
     <task id="LOCAL-00002" summary="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System">
       <option name="closed" value="true" />
@@ -448,7 +450,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691054535641</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="- GameManager.cs Synchronous [GameState, _countDownToStartTimer and _gamePlayingTimer] as ServerRpc which basically Fire off an event to start game&#10;- Implemented WaitingForOtherPlayersUI.cs">
+      <option name="closed" value="true" />
+      <created>1691058306291</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1691058306291</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +481,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="- Implemented all type of cutting ingredients &#10;- CuttingCounter.cs which takes Input and Output&#10;- Cutting counter only works if recipe has Input and Output" />
     <MESSAGE value="- Cutting Progress bar Canvas has been implemented with various Camera Mode&#10;- Trash Counter has been implemented&#10;- Fixed - Exceptional Handled once you have cut an KitchenObject into Slices. No longer able to cut once its done&#10;- Organized Script Structure and Hierarchy Structure" />
     <MESSAGE value="- Implemented StateMachine for Cooking meat to burn  &#10;- Implemented StoveCounter for cooking meat to burn&#10;- Created Scriptable Objects for Burning, Cooked and Uncooked meat &#10;- Created Prefabs for Burning, Cooked and Uncooked meat&#10;- Implemented IProgressBar which has been implemented in both Progressbar" />
     <MESSAGE value="- Implemented Plate Prefab, Scriptable Objects and complete burger Plate&#10;- Burger Ingredient logic &#10;- Plate can store Slices &#10;- Refactor BaseCounter.cs, &#10;- Added new Scripts PlateCompleteVisual.cs, PlateCounterVisual.cs and PlateCounterVisual.cs etc&#10;- Added MeatPattyBurned.prefab" />
@@ -496,7 +505,8 @@
     <MESSAGE value="- GetKitchenObjectSoIndex() and GetKitchenObjectSoFromIndex() has made Public in KitchenGameMultiplayer.cs&#10;- StoveCounter.cs Implemented Three NetworkVariable for _fryingState, _fryingTimer and _burningTimer in order to Synchronous with Server.&#10;               - SetStateIdleServerRpc() It handles the currentState.&#10;               - InteractLogicPlaceObjectOnCounterServerRpc()&#10;               - SetFryingRecipeSoClientRpc()&#10;               - SetBurningRecipeSoClientRpc()" />
     <MESSAGE value="- ClearCounter.cs, StoveCounter.cs and CuttingCounter.cs has Fixed Destroy kitchenObject.&#10;- PlateKitchenObject.cs now Contain Server and Client Combination in order to AddIngredient." />
     <MESSAGE value="- Player.cs extensible for new feature using LayerMask &#10;           - CapsuleCollider has replaced with BoxCollider which helps to move on corner and won-t stuck anymore&#10;           - Implemented additional LayerMask for interaction using Trigger etc" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Player.cs extensible for new feature using LayerMask &#10;           - CapsuleCollider has replaced with BoxCollider which helps to move on corner and won-t stuck anymore&#10;           - Implemented additional LayerMask for interaction using Trigger etc" />
+    <MESSAGE value="- GameManager.cs Synchronous [GameState, _countDownToStartTimer and _gamePlayingTimer] as ServerRpc which basically Fire off an event to start game&#10;- Implemented WaitingForOtherPlayersUI.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="- GameManager.cs Synchronous [GameState, _countDownToStartTimer and _gamePlayingTimer] as ServerRpc which basically Fire off an event to start game&#10;- Implemented WaitingForOtherPlayersUI.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -506,10 +516,10 @@
           <line>139</line>
           <properties documentPath="F:\Works\Unity_Projects\Personal\KitchenChaos_\Assets\Scripts\UI\OptionUI.cs" initialLine="140" containingFunctionPresentation="Method 'Show'">
             <startOffsets>
-              <option value="6032" />
+              <option value="6050" />
             </startOffsets>
             <endOffsets>
-              <option value="6069" />
+              <option value="6087" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />

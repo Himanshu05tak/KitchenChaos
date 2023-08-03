@@ -107,13 +107,13 @@ namespace UI
         }
         private void Start()
         {
-            GameManager.Instance.OnGamePause += OnGamePause;
+            GameManager.Instance.OnLocalGamePaused += OnLocalGamePaused;
             UpdateVisual();
             HidePressToRebindKey();
             Hide();
         }
 
-        private void OnGamePause(object sender, EventArgs e)
+        private void OnLocalGamePaused(object sender, EventArgs e)
         {
             Hide();
         }

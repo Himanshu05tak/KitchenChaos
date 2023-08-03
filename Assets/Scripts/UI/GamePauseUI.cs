@@ -20,17 +20,17 @@ namespace UI
 
         private void Start()
         {
-            GameManager.Instance.OnGamePause += OnGamePause;
-            GameManager.Instance.OnGameResume += OnGameResume;
+            GameManager.Instance.OnLocalGamePaused += OnLocalGamePaused;
+            GameManager.Instance.OnLocalGameResume += OnLocalGameResume;
             
             Hide();
         }
 
-        private void OnGamePause(object sender, EventArgs e)
+        private void OnLocalGamePaused(object sender, EventArgs e)
         {
             Show();
         }
-        private void OnGameResume(object sender, EventArgs e)
+        private void OnLocalGameResume(object sender, EventArgs e)
         {
             Hide();
         }
