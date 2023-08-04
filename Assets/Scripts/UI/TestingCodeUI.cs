@@ -15,13 +15,13 @@ namespace UI
             hostBtn.onClick.AddListener(() => 
             { 
                 Debug.Log("HOST"); 
-                NetworkManager.Singleton.StartHost();             
+                KitchenGameMultiplayer.Instance.StartHost();             
                 Hide();
             });
             clientBtn.onClick.AddListener(() => 
             {
                 Debug.Log("Client");
-                NetworkManager.Singleton.StartClient();
+                KitchenGameMultiplayer.Instance.StartClient();
                 Hide();
             });
         }

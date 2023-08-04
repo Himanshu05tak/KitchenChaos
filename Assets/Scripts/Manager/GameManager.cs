@@ -164,6 +164,11 @@ namespace Manager
             return _countDownToStartTimer.Value;
         }
 
+        public bool IsWaitingToStart()
+        {
+            return _state.Value == GameState.WaitingToStart;
+        }
+
         public bool IsGameOver()
         {
             return _state.Value == GameState.GameOver;

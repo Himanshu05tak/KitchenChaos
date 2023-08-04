@@ -150,7 +150,6 @@ namespace Controller
         }
         private bool CanMove(Vector3 moveDir,float moveDistance)
         {
-            const int playerHeight = 2;
             const float playerRadius = .7f;
             return !Physics.BoxCast(transform.position, Vector3.one * playerRadius,
                 moveDir, Quaternion.identity, moveDistance, collisionLayerMask);
