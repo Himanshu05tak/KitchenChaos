@@ -28,6 +28,7 @@ namespace Manager
         private Dictionary<ulong, bool> _playerReadyDictionary;
         private Dictionary<ulong, bool> _playerPausedDictionary;
         private const float GamePlayingTimerMax = 90f;
+        private bool _autoRTestGamePausedState;
 
         private enum GameState
         {
@@ -55,6 +56,14 @@ namespace Manager
         {
             _state.OnValueChanged += GameStateOnValueChanged;
             _isGamePaused.OnValueChanged += GamePausedOnValueChanged;
+
+            if (IsServer)
+                NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnectCallback;
+        }
+
+        private void OnClientDisconnectCallback(ulong clientID)
+        {
+            _autoRTestGamePausedState = true;
         }
 
         private void GamePausedOnValueChanged(bool previousValue, bool newValue)
@@ -104,6 +113,13 @@ namespace Manager
         {
             if (!IsServer) return;
             StateMachine();
+        }
+
+        private void LateUpdate()
+        {
+            if (!_autoRTestGamePausedState) return;
+            _autoRTestGamePausedState = false;
+            TestGamePausedState();
         }
 
         private void StateMachine()

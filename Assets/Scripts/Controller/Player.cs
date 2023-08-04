@@ -1,12 +1,11 @@
 using Input;
 using System;
-using System.Collections.Generic;
 using Manager;
-using Counters.KitchenCounters;
 using Interface;
-using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.Serialization;
+using Unity.Netcode;
+using Counters.KitchenCounters;
+using System.Collections.Generic;
 
 namespace Controller
 {
@@ -53,6 +52,17 @@ namespace Controller
 
             transform.position = spawnPositionList[(int)OwnerClientId];
             OnAnyPlayerSpawned?.Invoke(this,EventArgs.Empty);
+            
+            if(IsServer)
+                NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnectCallback;
+        }
+
+        private void OnClientDisconnectCallback(ulong clientID)
+        {
+            if (clientID == OwnerClientId && HasKitchenObject())
+            {
+                KitchenObject.KitchenObject.DestroyKitchenObject(GetKitchenObject());
+            }
         }
 
         private void PlayerInputControllerOnOnInteractAlternateAction(object sender, EventArgs e)
