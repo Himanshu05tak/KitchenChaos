@@ -4,11 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="Player Disconnects Scenarios.&#10;- GameManager.cs has implemented autoTestGamePausedState which is monitoring on Server API and Called in LateUpdate.&#10;- GameOverUI.cs and GamePauseUI.cs has implemented ReplayBtn and Shutdown Server.&#10;- HostDisconnectUI.cs enable user to display Disconnection.&#10;- In case Server or Host get disconnected. It will shutdown server">
+    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/CharacterSelectScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/CharacterSelectScene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LobbyScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LobbyScene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CharacterSelectReady.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CharacterSelectReady.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CharacterSelectUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CharacterSelectUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ConnectingUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ConnectingUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ConnectionResponseMessageUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ConnectionResponseMessageUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuCleanup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuCleanup.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Loader/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Loader/Loader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TestingCodeUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TestingCodeUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +57,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IHasProgress.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/Manager/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ResetDataStaticManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/AudioClipRefsSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -47,12 +67,16 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeListSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/MusicManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/CharacterSelectReady.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/CharacterSelectUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ConnectingUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ConnectionResponseMessageUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DeliveryResultUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameCountDownStartUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameOverUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/UI/GameOverUI.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/UI/GamePauseUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HostDisconnectUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/LobbyUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenuCleanup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/OptionUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/StoveBurnFlashingBarUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/StoveBurnWarningUI.cs" root0="FORCE_HIGHLIGHTING" />
@@ -71,29 +95,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.smartKeys_rider&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TODO_SCOPE": "All Places",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\rockh\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\rockh\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\rockh\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\rockh\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\rockh\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\rockh\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Build/Build_V_0.1\KitchenChaos.exe" />
@@ -190,7 +214,9 @@
       <workItem from="1690972905009" duration="6989000" />
       <workItem from="1691053699041" duration="4579000" />
       <workItem from="1691066361992" duration="2168000" />
-      <workItem from="1691139561195" duration="3288000" />
+      <workItem from="1691139561195" duration="3741000" />
+      <workItem from="1691227774425" duration="2061000" />
+      <workItem from="1691229917297" duration="5317000" />
     </task>
     <task id="LOCAL-00002" summary="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System">
       <option name="closed" value="true" />
@@ -472,7 +498,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691141968335</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Connection Approval - Late Joining Lobby&#10;- GameManager.cs has implemented a IsWaitingToStart() to check current GameState.&#10;- KitchenGameMultiplayer.cs replaced StartHost, StartClient and ConnectionApprovalCallback which indicate and handle joining scenario.">
+      <option name="closed" value="true" />
+      <created>1691143222962</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1691143222962</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +529,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="- Implemented Plate Prefab, Scriptable Objects and complete burger Plate&#10;- Burger Ingredient logic &#10;- Plate can store Slices &#10;- Refactor BaseCounter.cs, &#10;- Added new Scripts PlateCompleteVisual.cs, PlateCounterVisual.cs and PlateCounterVisual.cs etc&#10;- Added MeatPattyBurned.prefab" />
     <MESSAGE value="- Implemented a visual way to represent how many ingredient a plate contains.&#10;- PlateIconSingleUI.cs handle and SetUI Icon logic&#10;- PlateIconUI UpdateVisual using event" />
     <MESSAGE value="- Implemented a basic moving ShaderGraph for Deliver&#10;- Implemented a comparision logic to check if player deliver the right recipe to the customer&#10;- Created a bunch of Recipe with scriptableObject and a list of Recipe that we offer" />
     <MESSAGE value="- Implemented a Package TMP&#10;- Implemented DeliveryManagerSingleUI.cs update actual recipe name and Icon. &#10;- Implemented DeliveryManagerUI.cs display actual recipe on screen" />
@@ -520,7 +553,8 @@
     <MESSAGE value="- GameManager.cs Synchronous [GameState, _countDownToStartTimer and _gamePlayingTimer] as ServerRpc which basically Fire off an event to start game&#10;- Implemented WaitingForOtherPlayersUI.cs" />
     <MESSAGE value="- Synchronous MultiplayerGame Pause and Unpaused.&#10;- GameManager.cs Implemented two ServerRpc() in order to Pause and Resume the Game using Dictionary (ClientID).&#10;- PauseMultiplayerUI.cs enable player to Show and Hide &quot;WaitingForPLayerToResume&quot; Canvas." />
     <MESSAGE value="Player Disconnects Scenarios.&#10;- GameManager.cs has implemented autoTestGamePausedState which is monitoring on Server API and Called in LateUpdate.&#10;- GameOverUI.cs and GamePauseUI.cs has implemented ReplayBtn and Shutdown Server.&#10;- HostDisconnectUI.cs enable user to display Disconnection.&#10;- In case Server or Host get disconnected. It will shutdown server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Player Disconnects Scenarios.&#10;- GameManager.cs has implemented autoTestGamePausedState which is monitoring on Server API and Called in LateUpdate.&#10;- GameOverUI.cs and GamePauseUI.cs has implemented ReplayBtn and Shutdown Server.&#10;- HostDisconnectUI.cs enable user to display Disconnection.&#10;- In case Server or Host get disconnected. It will shutdown server" />
+    <MESSAGE value="Connection Approval - Late Joining Lobby&#10;- GameManager.cs has implemented a IsWaitingToStart() to check current GameState.&#10;- KitchenGameMultiplayer.cs replaced StartHost, StartClient and ConnectionApprovalCallback which indicate and handle joining scenario." />
+    <option name="LAST_COMMIT_MESSAGE" value="Connection Approval - Late Joining Lobby&#10;- GameManager.cs has implemented a IsWaitingToStart() to check current GameState.&#10;- KitchenGameMultiplayer.cs replaced StartHost, StartClient and ConnectionApprovalCallback which indicate and handle joining scenario." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

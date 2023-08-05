@@ -1,9 +1,10 @@
 using Input;
 using System;
-using System.Collections.Generic;
+using UnityEngine;
 using System.Linq;
 using Unity.Netcode;
-using UnityEngine;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 namespace Manager
 {
@@ -16,7 +17,8 @@ namespace Manager
         public event EventHandler OnLocalPlayerReadyChanged;
         public event EventHandler OnMultiplayerGamePaused;
         public event EventHandler OnMultiplayerGameUnpaused;
-        
+
+        [SerializeField] private Transform playerPrefab;
         
         private readonly NetworkVariable<GameState> _state = new ();
         private readonly NetworkVariable<float> _countDownToStartTimer = new(3);
@@ -27,7 +29,7 @@ namespace Manager
         private bool _isLocalPlayerReady;
         private Dictionary<ulong, bool> _playerReadyDictionary;
         private Dictionary<ulong, bool> _playerPausedDictionary;
-        private const float GamePlayingTimerMax = 90f;
+        private const float GAME_PLAYING_TIMER_MAX = 90f;
         private bool _autoRTestGamePausedState;
 
         private enum GameState
@@ -57,8 +59,18 @@ namespace Manager
             _state.OnValueChanged += GameStateOnValueChanged;
             _isGamePaused.OnValueChanged += GamePausedOnValueChanged;
 
-            if (IsServer)
-                NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnectCallback;
+            if (!IsServer) return;
+            NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnectCallback;
+            NetworkManager.Singleton.SceneManager.OnLoadEventCompleted +=SceneManagerOnLoadEventCompleted;
+        }
+
+        private void SceneManagerOnLoadEventCompleted(string sceneName, LoadSceneMode loadSceneMode, List<ulong> clientsCompleted, List<ulong> clientsTimedOut)
+        {
+            foreach (var clientID in NetworkManager.Singleton.ConnectedClientsIds)
+            {
+                var playerTransform = Instantiate(playerPrefab);
+                playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientID,true);
+            }
         }
 
         private void OnClientDisconnectCallback(ulong clientID)
@@ -132,7 +144,7 @@ namespace Manager
                     _countDownToStartTimer.Value -= Time.deltaTime;
                     if (_countDownToStartTimer.Value < 0f)
                         _state.Value = GameState.GamePlaying;
-                    _gamePlayingTimer.Value = GamePlayingTimerMax;
+                    _gamePlayingTimer.Value = GAME_PLAYING_TIMER_MAX;
 
                     break;
                 case GameState.GamePlaying:
@@ -176,7 +188,7 @@ namespace Manager
 
         public float GetPlayingTimerNormalized()
         {
-            return 1 - _gamePlayingTimer.Value / GamePlayingTimerMax;
+            return 1 - _gamePlayingTimer.Value / GAME_PLAYING_TIMER_MAX;
         }
 
         public bool IsLocalPlayerReady()
