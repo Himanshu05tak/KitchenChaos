@@ -23,7 +23,7 @@ namespace Counters.CounterVisuals
             Player.LocalInstance.OnSelectedCounterCharged += InstanceOnOnSelectedCounterCharged;
         }
 
-        private void InstanceOnOnSelectedCounterCharged(object sender, Player.OnSelectedCounterChangedEventArgs e)
+        private void InstanceOnOnSelectedCounterCharged(object sender, Player.SelectedCounterChangedEventArgs e)
         {
             if (e.SelectedCounter == baseCounter)
             {

@@ -1,18 +1,18 @@
 using System;
-using System.Linq;
-using Controller;
 using Interface;
-using ScriptableObjects;
-using Unity.Netcode;
+using Controller;
 using UnityEngine;
+using System.Linq;
+using Unity.Netcode;
+using ScriptableObjects;
 
 namespace Counters.KitchenCounters
 {
     public class StoveCounter : BaseCounter, IHasProgress
     {
-        public event EventHandler<OnStateChangedEventArgs> OnStateChanged;
+        public event EventHandler<StateChangedEventArgs> OnStateChanged;
         public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
-        public class OnStateChangedEventArgs : EventArgs
+        public class StateChangedEventArgs : EventArgs
         {
             public FryingState FryingState;
         }
@@ -42,7 +42,7 @@ namespace Counters.KitchenCounters
 
         private void FryingStateOnValueChanged(FryingState previousValue, FryingState newValue)
         {
-            OnStateChanged?.Invoke(this, new OnStateChangedEventArgs() { FryingState = _fryingState.Value });
+            OnStateChanged?.Invoke(this, new StateChangedEventArgs() { FryingState = _fryingState.Value });
             if (_fryingState.Value is FryingState.Burned or FryingState.Idle) 
                 OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs() { ProgressNormalized = 0f });
         }
@@ -125,12 +125,15 @@ namespace Counters.KitchenCounters
                 if (player.HasKitchenObject())
                 {
                     //Player is carrying something 
-                    if (!player.GetKitchenObject().TryGetPlate(out var plateKitchenObject)) return;
-                    //Player is holding a plate
-                    if (plateKitchenObject.TryAddIngredient(GetKitchenObject().GetKitchenObjectSo))
-                        KitchenObject.KitchenObject.DestroyKitchenObject(GetKitchenObject());
-                    
-                    SetStateIdleServerRpc();
+                    if (player.GetKitchenObject().TryGetPlate(out var plateKitchenObject))
+                    {
+                        //Player is holding a plate
+                        if (plateKitchenObject.TryAddIngredient(GetKitchenObject().GetKitchenObjectSo))
+                        {
+                            KitchenObject.KitchenObject.DestroyKitchenObject(GetKitchenObject());
+                            SetStateIdleServerRpc();
+                        }
+                    };
                 }
                 else
                 {

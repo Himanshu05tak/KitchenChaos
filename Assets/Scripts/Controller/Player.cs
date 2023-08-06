@@ -12,7 +12,7 @@ namespace Controller
     public class Player : NetworkBehaviour, IKitchenObjectParent
     {
         public static Player LocalInstance { get; private set; }
-        public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterCharged;
+        public event EventHandler<SelectedCounterChangedEventArgs> OnSelectedCounterCharged;
 
         public static event EventHandler OnAnyPlayerSpawned;
         public static event EventHandler OnAnyPickedSomething;
@@ -21,7 +21,7 @@ namespace Controller
             OnAnyPlayerSpawned = null;
         }
         public event EventHandler OnPickSomething;
-        public class OnSelectedCounterChangedEventArgs : EventArgs
+        public class SelectedCounterChangedEventArgs : EventArgs
         {
             public BaseCounter SelectedCounter;
         }
@@ -32,6 +32,7 @@ namespace Controller
         [SerializeField] private LayerMask collisionLayerMask;
         [SerializeField] private Transform kitchenObjectHoldPoint;
         [SerializeField] private List<Vector3> spawnPositionList;
+        [SerializeField] private PlayerVisual playerVisual;
 
         
         private bool _isWalking;
@@ -43,14 +44,17 @@ namespace Controller
         {
             PlayerInputController.Instance.OnInteractAction += PlayerInputControllerOnOnInteractAction;
             PlayerInputController.Instance.OnInteractAlternateAction += PlayerInputControllerOnOnInteractAlternateAction;
+
+            var playerData = KitchenGameMultiplayer.Instance.GetPlayerDataFromClientID(OwnerClientId);
+            playerVisual.SetPlayerColor(KitchenGameMultiplayer.Instance.GetPlayerColor(playerData.ColorId));
         }
 
         public override void OnNetworkSpawn()
         {
             base.OnNetworkSpawn();
             if (IsOwner) LocalInstance = this;
-
-            transform.position = spawnPositionList[(int)OwnerClientId];
+            
+            transform.position = spawnPositionList[KitchenGameMultiplayer.Instance.GetPlayerDataIndexFromClientID(OwnerClientId)];
             OnAnyPlayerSpawned?.Invoke(this,EventArgs.Empty);
             
             if(IsServer)
@@ -163,7 +167,7 @@ namespace Controller
         private void SetSelectedCounter(BaseCounter selectedCounter)
         {
             _selectedCounter = selectedCounter;
-            OnSelectedCounterCharged?.Invoke(this,new OnSelectedCounterChangedEventArgs {SelectedCounter = _selectedCounter});
+            OnSelectedCounterCharged?.Invoke(this,new SelectedCounterChangedEventArgs {SelectedCounter = _selectedCounter});
         }
 
         public Transform GetKitchenObjectFollowTransform()

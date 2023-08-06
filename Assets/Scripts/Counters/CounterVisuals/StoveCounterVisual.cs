@@ -14,7 +14,7 @@ namespace Counters.CounterVisuals
         {
             stoveCounter.OnStateChanged += StoveCounterOnOnStateChanged;
         }
-        private void StoveCounterOnOnStateChanged(object sender, StoveCounter.OnStateChangedEventArgs e)
+        private void StoveCounterOnOnStateChanged(object sender, StoveCounter.StateChangedEventArgs e)
         {
             var showVisual = e.FryingState is StoveCounter.FryingState.Frying or StoveCounter.FryingState.Fried;
             stoveGameObject.gameObject.SetActive(showVisual);

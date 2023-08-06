@@ -28,7 +28,7 @@ namespace Sound
             
         }
 
-        private void StoveCounterOnStateChanged(object sender, StoveCounter.OnStateChangedEventArgs e)
+        private void StoveCounterOnStateChanged(object sender, StoveCounter.StateChangedEventArgs e)
         {
             var playSound = e.FryingState is StoveCounter.FryingState.Frying or StoveCounter.FryingState.Fried;
 
