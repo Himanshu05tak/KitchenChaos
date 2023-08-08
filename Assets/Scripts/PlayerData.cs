@@ -1,19 +1,24 @@
 using System;
+using Unity.Collections;
 using Unity.Netcode;
 
 public struct PlayerData : IEquatable<PlayerData>, INetworkSerializable
 {
     public ulong ClientId;
     public int ColorId;
+    public FixedString64Bytes PlayerName;
+    public FixedString64Bytes PlayerID;
     
     public bool Equals(PlayerData other)
     {
-        return ClientId == other.ClientId && ColorId == other.ColorId;
+        return ClientId == other.ClientId && ColorId == other.ColorId && PlayerName == other.PlayerName && PlayerID == other.PlayerID;
     }
 
     public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
     {
         serializer.SerializeValue(ref ClientId);
         serializer.SerializeValue(ref ColorId);
+        serializer.SerializeValue(ref PlayerName);
+        serializer.SerializeValue(ref PlayerID);
     }
 }

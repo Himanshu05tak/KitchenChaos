@@ -29,8 +29,9 @@ public class CharacterSelectReady : NetworkBehaviour
 
         var allClientsAreReady = NetworkManager.Singleton.ConnectedClientsIds.All(clientId => _playerReadyDictionary.ContainsKey(clientId) && _playerReadyDictionary[clientId]);
 
-        if (allClientsAreReady)
-            Loader.Loader.LoadNetwork(Loader.Loader.Scene.GamePlay);
+        if (!allClientsAreReady) return;
+        KitchenGameLobby.Instance.DeleteLobby();
+        Loader.Loader.LoadNetwork(Loader.Loader.Scene.GamePlay);
     }
     
     [ClientRpc]
