@@ -4,67 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/KitchenGameLobby.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/KitchenGameLobby.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects/AudioClipRefsSO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects/AudioClipRefsSO.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects/BurningRecipeSO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects/BurningRecipeSO.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects/CuttingRecipeSO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects/CuttingRecipeSO.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects/FryingRecipeSO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects/FryingRecipeSO.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects/KitchenObjectListSO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects/KitchenObjectListSO.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects/KitchenObjectSO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects/KitchenObjectSO.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects/RecipeListSO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects/RecipeListSO.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects/RecipeSO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/ScriptableObjects/RecipeSO.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyCreateUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyCreateUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyListSingleUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyListSingleUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyMessageUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyMessageUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.services.core/Settings.json" afterDir="false" />
+    <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="- Setup Lobby&#10;- KitchenGameLobby.cs It does contain all important logic and function like InitializeUnityAuthentication(), HandleHeartBeat(), HandlePeriodicListLobbies(), ListLobbies(), IsLobbyHost(), CreateLobby(), QuickJoin(), JoinWithCode(), JoinWithID(), DeleteLobby(), LeaveLobby(), KickPlayer() and GetLobby().&#10;- LobbyUI.cs It has lobbyContainer, lobbyTemplate, mainMenuBtn and JoinCodeBtn extra InputField for PlayerName, JoinCode and UpdateLobbyList() &#10;- LobbyCreateUI.cs It allows us to create a Private and Public Lobby.&#10;- LobbyListSingleUI.cs It has implemented on lobbyTemplate for set lobby and its name. &#10;- LobbyMessageUI.cs It contains all the necessary events to fire off on Success and Fail to connect lobby or any exceptional occured">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CharacterSelectScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CharacterSelectScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/LobbyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LobbyScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterSelectPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterSelectPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/AudioClipRefsSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/AudioClipRefsSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BurningRecipeSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BurningRecipeSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/CuttingRecipeSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/CuttingRecipeSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/FryingRecipeSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/FryingRecipeSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/KitchenObjectListSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/KitchenObjectListSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/KitchenObjectSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/KitchenObjectSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeListSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeListSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/RecipeSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CharacterSelectReady.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CharacterSelectReady.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CharacterSelectUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CharacterSelectUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ConnectionResponseMessageUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ConnectionResponseMessageUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KitchenGameLobby.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KitchenGameLobby.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyMessageUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyMessageUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuCleanup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenuCleanup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuCleanup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenuCleanup.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Assets/Prefabs/CharacterSelectPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Assets/Prefabs/CharacterSelectPlayer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +40,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Counters/Plate/PlateCompleteVisual.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IHasProgress.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://F:/Works/Unity_Projects/Personal/KitchenChaos_/Assets/Scripts/KitchenGameLobby.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KitchenGameMultiplayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuCleanup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -261,7 +209,7 @@
       <workItem from="1691487085640" duration="5000" />
       <workItem from="1691487097879" duration="1007000" />
       <workItem from="1691488195731" duration="3792000" />
-      <workItem from="1691496117875" duration="1211000" />
+      <workItem from="1691496117875" duration="4541000" />
     </task>
     <task id="LOCAL-00002" summary="- Implemented New Input Controller &#10;- Refactor Old Input System into New Input System">
       <option name="closed" value="true" />
@@ -567,7 +515,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691329975736</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="- Setup Lobby&#10;- KitchenGameLobby.cs It does contain all important logic and function like InitializeUnityAuthentication(), HandleHeartBeat(), HandlePeriodicListLobbies(), ListLobbies(), IsLobbyHost(), CreateLobby(), QuickJoin(), JoinWithCode(), JoinWithID(), DeleteLobby(), LeaveLobby(), KickPlayer() and GetLobby().&#10;- LobbyUI.cs It has lobbyContainer, lobbyTemplate, mainMenuBtn and JoinCodeBtn extra InputField for PlayerName, JoinCode and UpdateLobbyList() &#10;- LobbyCreateUI.cs It allows us to create a Private and Public Lobby.&#10;- LobbyListSingleUI.cs It has implemented on lobbyTemplate for set lobby and its name. &#10;- LobbyMessageUI.cs It contains all the necessary events to fire off on Success and Fail to connect lobby or any exceptional occured">
+      <option name="closed" value="true" />
+      <created>1691497401137</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1691497401137</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +546,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="- Implemented a Package TMP&#10;- Implemented DeliveryManagerSingleUI.cs update actual recipe name and Icon. &#10;- Implemented DeliveryManagerUI.cs display actual recipe on screen" />
     <MESSAGE value="- Fixed Interact and Alternative Interact action for Cutting counter&#10;- Added Music on GamePlay.unity" />
     <MESSAGE value="- Implemented AudioClips for Player's Footsteps, Pickup, drop, stove, trash and On Delivery Fail and Success.&#10;- PlayerSounds.cs : It is specific for player footstep&#10;- SoundManager.cs : This is control every sound played by AudioSource&#10;- StoveCounterSound.cs : While stove is frying or fried &#10;- Created Scriptable object to organize all the sound clip assets" />
     <MESSAGE value="- Organized namespace and script structure&#10;- Implemented GameOverUI, Countdown UI and Timer UI&#10;- GameManager.cs is to control game Flow using State Machine&#10;- GameCountDownStartUI.cs is controlling countDown logic&#10;- GameOverUI.cs is handling GameOver Logic&#10;- GamePlayingClockUI.cs is handling timer logic" />
@@ -615,7 +570,8 @@
     <MESSAGE value="Connection Approval - Late Joining Lobby&#10;- GameManager.cs has implemented a IsWaitingToStart() to check current GameState.&#10;- KitchenGameMultiplayer.cs replaced StartHost, StartClient and ConnectionApprovalCallback which indicate and handle joining scenario." />
     <MESSAGE value="- Connection Scene Flow&#10;- CharacterSelectScene.unity &#10;         - It allows us to wait in the lobby and ready for the next battle&#10;         - CharacterSelectReady.cs handles SetPlayerReadyServerRpc() using KeyValuePair (Dictionary)&#10;         - CharacterSelectUI.cs It allows us to Set Player as Ready&#10;         - ConnectingUI.cs It handles callback using EventHandler OnTryingToJoinGame and  OnFailedToJoinGame to Show or Hide Panel.&#10;         - ConnectionResponseMessageUI.cs It enable us to Display Message on KitchenGameMultiplayerOnFailedToJoinGame.&#10;- LobbyScene.unity has implemented to display lobby status.&#10;                 - LobbyUI.cs It does contain two buttons to CreateGameLobby and JoinGame.&#10;- GameManager.cs modified and implemented two new events are as follows&#10;                 - OnClientDisconnectCallback It informs back to Server if someone disconnected &#10;                 - OnLoadEventCompleted It allows us to Instantiate new player using ClientID&#10;- KitchenGameMultiplayer.cs have implemented new two events.&#10;                 - OnTryingToJoinGame It invoked on ConnectionApprovalCallback and OnStartClient&#10;                 - OnFailedToJoinGame It invoked on ConnectionApprovalCallback and OnClientDisconnectCallback&#10;- Loader.cs added two new Scenes. LobbyScene.unity and CharacterSelectScene.unity&#10;                 - Implemented new Static LoadNetwork() in order to load Scene on Server.&#10;- MainMenu.unity modified workflow which leads to Lobby&#10;                 - MainMenuCleanup.cs It just Cleanup NetworkManger and KitchenGameMultiplayer if it persist after switching scenes." />
     <MESSAGE value="- CharacterSelectScene.unity&#10;- Implemented new Scripts are as follows:&#10;      - CharacterColorSelectUI.cs It allows you to select specific color using select overlay and fire off events&#10;      - CharacterSelectPlayer.cs It allows you tell the server that a client is ready to start a game. &#10;      - PlayerVisual.cs It contains actual MeshRenderer to replace with selected color.&#10;      - PlayerData.cs - It holds the localPlayer data like ClientID, Color etc.&#10;- Fixed&#10;      - StoveCounter.cs had an issue regarding FryingState (&quot;Raw meat&quot; you aren't suppose to pick up while frying)" />
-    <option name="LAST_COMMIT_MESSAGE" value="- CharacterSelectScene.unity&#10;- Implemented new Scripts are as follows:&#10;      - CharacterColorSelectUI.cs It allows you to select specific color using select overlay and fire off events&#10;      - CharacterSelectPlayer.cs It allows you tell the server that a client is ready to start a game. &#10;      - PlayerVisual.cs It contains actual MeshRenderer to replace with selected color.&#10;      - PlayerData.cs - It holds the localPlayer data like ClientID, Color etc.&#10;- Fixed&#10;      - StoveCounter.cs had an issue regarding FryingState (&quot;Raw meat&quot; you aren't suppose to pick up while frying)" />
+    <MESSAGE value="- Setup Lobby&#10;- KitchenGameLobby.cs It does contain all important logic and function like InitializeUnityAuthentication(), HandleHeartBeat(), HandlePeriodicListLobbies(), ListLobbies(), IsLobbyHost(), CreateLobby(), QuickJoin(), JoinWithCode(), JoinWithID(), DeleteLobby(), LeaveLobby(), KickPlayer() and GetLobby().&#10;- LobbyUI.cs It has lobbyContainer, lobbyTemplate, mainMenuBtn and JoinCodeBtn extra InputField for PlayerName, JoinCode and UpdateLobbyList() &#10;- LobbyCreateUI.cs It allows us to create a Private and Public Lobby.&#10;- LobbyListSingleUI.cs It has implemented on lobbyTemplate for set lobby and its name. &#10;- LobbyMessageUI.cs It contains all the necessary events to fire off on Success and Fail to connect lobby or any exceptional occured" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Setup Lobby&#10;- KitchenGameLobby.cs It does contain all important logic and function like InitializeUnityAuthentication(), HandleHeartBeat(), HandlePeriodicListLobbies(), ListLobbies(), IsLobbyHost(), CreateLobby(), QuickJoin(), JoinWithCode(), JoinWithID(), DeleteLobby(), LeaveLobby(), KickPlayer() and GetLobby().&#10;- LobbyUI.cs It has lobbyContainer, lobbyTemplate, mainMenuBtn and JoinCodeBtn extra InputField for PlayerName, JoinCode and UpdateLobbyList() &#10;- LobbyCreateUI.cs It allows us to create a Private and Public Lobby.&#10;- LobbyListSingleUI.cs It has implemented on lobbyTemplate for set lobby and its name. &#10;- LobbyMessageUI.cs It contains all the necessary events to fire off on Success and Fail to connect lobby or any exceptional occured" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
