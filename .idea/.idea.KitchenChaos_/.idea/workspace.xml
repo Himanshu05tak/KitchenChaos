@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e995364a-2588-4320-b647-b0720272d178" name="Changes" comment="- Setup Lobby&#10;- KitchenGameLobby.cs It does contain all important logic and function like InitializeUnityAuthentication(), HandleHeartBeat(), HandlePeriodicListLobbies(), ListLobbies(), IsLobbyHost(), CreateLobby(), QuickJoin(), JoinWithCode(), JoinWithID(), DeleteLobby(), LeaveLobby(), KickPlayer() and GetLobby().&#10;- LobbyUI.cs It has lobbyContainer, lobbyTemplate, mainMenuBtn and JoinCodeBtn extra InputField for PlayerName, JoinCode and UpdateLobbyList() &#10;- LobbyCreateUI.cs It allows us to create a Private and Public Lobby.&#10;- LobbyListSingleUI.cs It has implemented on lobbyTemplate for set lobby and its name. &#10;- LobbyMessageUI.cs It contains all the necessary events to fire off on Success and Fail to connect lobby or any exceptional occured">
+      <change afterPath="$PROJECT_DIR$/Assets/lobbyUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/lobbyUI.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KitchenChaos_/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/LobbyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LobbyScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KitchenGameLobby.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KitchenGameLobby.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyMessageUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyMessageUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LobbyUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
