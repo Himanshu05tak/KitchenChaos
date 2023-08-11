@@ -14,6 +14,8 @@ public class KitchenGameMultiplayer : NetworkBehaviour
     private const string PLAYER_PREFS_PLAYER_NAME_MULTIPLAYER_ = "PlayerNameMultiplayer";
     public static KitchenGameMultiplayer Instance { get; private set; }
 
+    public static bool PlayMultiplayer;
+
     public event EventHandler OnTryingToJoinGame;
     public event EventHandler OnFailedToJoinGame;
     public event EventHandler OnPlayerDataNetworkListChange;
@@ -30,6 +32,15 @@ public class KitchenGameMultiplayer : NetworkBehaviour
         _playerName = PlayerPrefs.GetString(PLAYER_PREFS_PLAYER_NAME_MULTIPLAYER_,"PlayerName" + Random.Range(100,1000));
         _playerDataNetworkList = new NetworkList<PlayerData>();  
         _playerDataNetworkList.OnListChanged += PlayerDataNetworkList_OnListChanged;
+    }
+
+    private void Start()
+    {
+        if (!PlayMultiplayer)
+        {
+            StartHost();
+            Loader.Loader.LoadNetwork(Loader.Loader.Scene.GamePlay);
+        }
     }
 
     public string GetPlayerName()
